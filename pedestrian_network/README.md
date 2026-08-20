@@ -1,4 +1,4 @@
-# [Tool Name]
+# [TOOL NAME]
 
 <p align="center">
   <img src="images/overview.png" alt="Overview: aerial imagery to pedestrian network" width="92%">
@@ -6,12 +6,16 @@
 
 **[Tool Name]** is a tool for automated mapping of pedestrian infrastructure from aerial imagery. A dual-branch Swin Transformer segmentation model detects the components of the pedestrian network (i.e., sidewalks, footway, crosswalks, and midblock driveway entrances) including the portions hidden under tree canopy and shadows. The pixel predictions are converted into geo-referenced polygons with per-pixel confidence scores, and finally into a topologically connected centerline network of links and nodes, ready for pedestrian accessibility, connectivity, and routing analyses.
 
+<br>
+
 **Highlights**
 
-* **Robust to tree occlusion and shadows**: The model recovers the network beneath tree canopy and shadows — both **on-leaf and off-leaf** imagery work as input.
-* **Beyond sidewalks and crosswalks**: It also identifies midblock driveway entrances, a frequently ignored but potential component of the pedestrian network.
-* **Polygons + confidence scores**: The output polygons preserve geometry (e.g., sidewalk width), and every prediction carries a calibrated per-pixel **confidence score** that supports downstream decision-making (e.g., prioritizing where additional verification via field survey or street view imageryh is needed).
-* **Centerline network construction**: The polygons are skeletonized into **centerlines that become the links and nodes** of a topologically connected graph, constituting a complete pedestrian network.
+* **Robust to tree occlusion and shadows**: Recovers the network hidden under tree canopy and shadows, so both on-leaf and off-leaf imagery work as input.
+* **Beyond sidewalks and crosswalks**: Also detects midblock driveway entrances, an often-ignored component of the pedestrian network.
+* **Polygons with confidence scores**: Output polygons preserve geometry (e.g., sidewalk width), and each prediction carries a calibrated per-pixel confidence score for prioritizing where field survey or street view verification is needed.
+* **Centerline network construction**: Polygons are skeletonized into centerlines that form the links and nodes of a topologically connected pedestrian network.
+
+<br>
 
 ## Updates
 
