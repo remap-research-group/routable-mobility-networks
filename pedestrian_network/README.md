@@ -21,6 +21,8 @@
 
 * **[September 2026]** Version 0 released (trained on **###** labeled image tiles across **Boston** and **Atlanta**)
 
+<br>
+
 ## Getting Started
 
 1. [Requirements](#requirements)
@@ -119,6 +121,8 @@ Useful parameters to tune for your region: `--thr` (confidence threshold for inc
 | 4 | crosswalk | pedestrian crossing visible in the imagery |
 
 Classes 1–4 together constitute the pedestrian network; the confidence rasters and centerline network are derived from their union.
+
+<br>
 
 ## Repository Structure
 
