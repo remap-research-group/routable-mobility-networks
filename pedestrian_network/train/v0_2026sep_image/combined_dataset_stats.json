@@ -1,0 +1,39 @@
+{
+  "combined_class_weights": [
+    0.5,
+    3.125676890213613,
+    15.110250761139072,
+    50.0,
+    21.183933675229145
+  ],
+  "combined_pixels": {
+    "background": 972444631,
+    "visible_sidewalk": 68302029,
+    "tree": 14128824,
+    "entrance": 2496960,
+    "crosswalk": 10077924
+  },
+  "combined_percent": {
+    "background": 91.09975134694038,
+    "visible_sidewalk": 6.3986140290505755,
+    "tree": 1.3236047711025756,
+    "entrance": 0.23391813566736247,
+    "crosswalk": 0.94411171723911
+  },
+  "per_year": {
+    "2023": {
+      "background": 491110885,
+      "visible_sidewalk": 27679649,
+      "tree": 14090725,
+      "entrance": 1185517,
+      "crosswalk": 4901288
+    },
+    "2025": {
+      "background": 481333746,
+      "visible_sidewalk": 40622380,
+      "tree": 38099,
+      "entrance": 1311443,
+      "crosswalk": 5176636
+    }
+  }
+}

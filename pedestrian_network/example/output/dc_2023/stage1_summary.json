@@ -1,0 +1,205 @@
+{
+  "weights": "/media/cura/slieu3/RMN/repo/run/src",
+  "temperatures": {
+    "T_network": 1.8015257120132446,
+    "T_entrance": 1.6713649034500122,
+    "T_crosswalk": 1.5146324634552002
+  },
+  "params": {
+    "window": 512,
+    "overlap": 128,
+    "context_px": 192,
+    "crs_override": null,
+    "confidence_format": "uint8"
+  },
+  "confidence": "p = sigmoid(logit / T_head); uint8 rasters store p*255 with band scale 1/255",
+  "classes": {
+    "0": "background",
+    "1": "visible_sidewalk",
+    "2": "tree",
+    "3": "entrance",
+    "4": "crosswalk"
+  },
+  "images": [
+    {
+      "image": "tile_0001_0022.tif",
+      "size_px": [
+        1024,
+        1024
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:26985",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 81.17,
+        "visible_sidewalk": 4.671,
+        "tree": 12.235,
+        "entrance": 0.436,
+        "crosswalk": 1.489
+      },
+      "mean_network_confidence": 0.1102,
+      "network_pixels_at_0.5": 108199,
+      "seconds": 6.8
+    },
+    {
+      "image": "tile_0001_0023.tif",
+      "size_px": [
+        1024,
+        1024
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:26985",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 84.114,
+        "visible_sidewalk": 5.854,
+        "tree": 8.561,
+        "entrance": 0.405,
+        "crosswalk": 1.066
+      },
+      "mean_network_confidence": 0.1027,
+      "network_pixels_at_0.5": 101627,
+      "seconds": 1.6
+    },
+    {
+      "image": "tile_0001_0024.tif",
+      "size_px": [
+        1024,
+        1024
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:26985",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 84.735,
+        "visible_sidewalk": 5.055,
+        "tree": 8.882,
+        "entrance": 1.327,
+        "crosswalk": 0.0
+      },
+      "mean_network_confidence": 0.0887,
+      "network_pixels_at_0.5": 83776,
+      "seconds": 1.7
+    },
+    {
+      "image": "tile_0002_0022.tif",
+      "size_px": [
+        1024,
+        1024
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:26985",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 83.688,
+        "visible_sidewalk": 4.798,
+        "tree": 9.746,
+        "entrance": 0.178,
+        "crosswalk": 1.59
+      },
+      "mean_network_confidence": 0.1054,
+      "network_pixels_at_0.5": 103921,
+      "seconds": 3.3
+    },
+    {
+      "image": "tile_0002_0023.tif",
+      "size_px": [
+        1024,
+        1024
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:26985",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 85.757,
+        "visible_sidewalk": 4.813,
+        "tree": 5.265,
+        "entrance": 1.073,
+        "crosswalk": 3.092
+      },
+      "mean_network_confidence": 0.0902,
+      "network_pixels_at_0.5": 87396,
+      "seconds": 1.3
+    },
+    {
+      "image": "tile_0002_0024.tif",
+      "size_px": [
+        1024,
+        1024
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:26985",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 72.308,
+        "visible_sidewalk": 9.148,
+        "tree": 9.995,
+        "entrance": 0.62,
+        "crosswalk": 7.929
+      },
+      "mean_network_confidence": 0.1937,
+      "network_pixels_at_0.5": 196982,
+      "seconds": 1.3
+    },
+    {
+      "image": "tile_0003_0022.tif",
+      "size_px": [
+        1024,
+        1024
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:26985",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 73.084,
+        "visible_sidewalk": 10.81,
+        "tree": 8.806,
+        "entrance": 0.705,
+        "crosswalk": 6.596
+      },
+      "mean_network_confidence": 0.2059,
+      "network_pixels_at_0.5": 209721,
+      "seconds": 1.2
+    },
+    {
+      "image": "tile_0003_0023.tif",
+      "size_px": [
+        1024,
+        1024
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:26985",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 69.738,
+        "visible_sidewalk": 10.515,
+        "tree": 12.551,
+        "entrance": 0.266,
+        "crosswalk": 6.93
+      },
+      "mean_network_confidence": 0.2171,
+      "network_pixels_at_0.5": 219282,
+      "seconds": 1.1
+    },
+    {
+      "image": "tile_0003_0024.tif",
+      "size_px": [
+        1024,
+        1024
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:26985",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 84.415,
+        "visible_sidewalk": 5.814,
+        "tree": 7.552,
+        "entrance": 0.426,
+        "crosswalk": 1.792
+      },
+      "mean_network_confidence": 0.1079,
+      "network_pixels_at_0.5": 108811,
+      "seconds": 2.3
+    }
+  ]
+}

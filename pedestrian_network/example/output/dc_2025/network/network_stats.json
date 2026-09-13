@@ -1,0 +1,98 @@
+{
+  "mosaic_px": [
+    3072,
+    3072
+  ],
+  "resolution_m_per_px": 0.08,
+  "crs": "EPSG:26985",
+  "params": {
+    "crs": null,
+    "res": 0.08,
+    "chunk_px": 1024,
+    "thr": 0.5,
+    "gap_close_px": 2,
+    "max_hole_m2": 5.0,
+    "min_component_m2": 100.0,
+    "max_snap_px": 25,
+    "connector_width_px": 3,
+    "buffer_m": 5.0,
+    "min_spur_m": 3.0,
+    "dangle_max_m": 8.0,
+    "dangle_keep_m": 2.0,
+    "max_pseudo_m": 4.0,
+    "poly_smooth_m": 0.2,
+    "poly_simplify_m": 0.3
+  },
+  "network_area_m2": 9283.1,
+  "crosswalk_clean_snap": {
+    "cw_px_added_by_close": 3022,
+    "cw_px_removed_by_open": 3044,
+    "holes_filled": 68,
+    "speck_1->0": 398,
+    "speck_1->4": 213,
+    "speck_3->0": 145,
+    "speck_3->4": 43,
+    "speck_2->4": 8,
+    "seam_px_to_crosswalk": 1365,
+    "seam_px_to_walkable": 1590,
+    "components": 19,
+    "already_touching": 19,
+    "connected": 0,
+    "dropped": 0,
+    "speck_2->1": 5,
+    "speck_4->0": 11,
+    "rect_regularized": 2,
+    "speck_2->0": 5,
+    "speck_1->3": 18,
+    "speck_3->1": 2
+  },
+  "crosswalk_regions": 12,
+  "crosswalk_regions_kept": 10,
+  "unique_crossings": 29,
+  "axes_corrected": 1,
+  "midblock_erased": 3,
+  "dangles_removed": 24,
+  "links": {
+    "crosswalk": {
+      "n": 34,
+      "km": 0.403,
+      "avg_width_m": 4.08,
+      "min_width_m": 1.05
+    },
+    "midblock": {
+      "n": 19,
+      "km": 0.098
+    },
+    "pseudo": {
+      "n": 83,
+      "km": 0.095
+    },
+    "sidewalk": {
+      "n": 189,
+      "km": 1.967,
+      "avg_width_m": 3.11,
+      "min_width_m": 0.53
+    }
+  },
+  "nodes": {
+    "endpoint": 46,
+    "junction": 74,
+    "type_change": 165
+  },
+  "unattached_crosswalk_ends": 1,
+  "polygons": {
+    "crosswalk": 46,
+    "midblock": 19,
+    "sidewalk": 53
+  },
+  "files": [
+    "network_mask.tif",
+    "links.geojson",
+    "links_wgs84.geojson",
+    "nodes.geojson",
+    "nodes_wgs84.geojson",
+    "network_polygons.geojson",
+    "network_polygons_wgs84.geojson",
+    "network_stats.json"
+  ]
+}

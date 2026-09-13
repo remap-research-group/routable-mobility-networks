@@ -1,0 +1,37 @@
+{
+  "model": "DBSwinT_v4 (dual-branch Swin-T, AFF fusion, U-Net decoder, 4 heads)",
+  "source_run": "20260903_110705_v4_unified",
+  "exported_at": "2026-09-03T17:51:29+00:00",
+  "classes": {
+    "0": "background",
+    "1": "visible_sidewalk",
+    "2": "tree",
+    "3": "entrance",
+    "4": "crosswalk"
+  },
+  "network_classes": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "input": {
+    "img_size": 512,
+    "channels": 3,
+    "resolution_m_per_px": 0.08,
+    "normalize_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalize_std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "confidence": "p = sigmoid(logit / T_head), T from temperature.json",
+  "consumers": [
+    "run/stage_1/segmentation.py"
+  ]
+}

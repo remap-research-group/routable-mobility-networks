@@ -1,0 +1,62 @@
+{
+  "NUM_CLASSES": 5,
+  "CLASS_NAMES": [
+    "background",
+    "visible_sidewalk",
+    "tree",
+    "entrance",
+    "crosswalk"
+  ],
+  "NETWORK_CLASSES": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "ENTRANCE_CLASSES": [
+    3
+  ],
+  "CROSSWALK_CLASSES": [
+    4
+  ],
+  "USE_ENTRANCE_HEAD": true,
+  "USE_CROSSWALK_HEAD": true,
+  "IMG_SIZE": 512,
+  "IN_CHANNELS": 3,
+  "EMBED_DIM": 96,
+  "DEPTHS": [
+    2,
+    2,
+    6,
+    2
+  ],
+  "NUM_HEADS": [
+    3,
+    6,
+    12,
+    24
+  ],
+  "WINDOW_SIZE": 7,
+  "LOCAL_PATCH": 4,
+  "GLOBAL_PATCH": 8,
+  "PRETRAINED_MODEL": "swin_tiny_patch4_window7_224",
+  "GAP_CLOSE_PX": 2,
+  "CONN_RADIUS_PX": 8,
+  "LAMBDA_CONN": 0.2,
+  "EPOCHS": 120,
+  "BATCH_SIZE": 4,
+  "LR": 0.0002,
+  "LR_PRETRAINED": 2e-05,
+  "WEIGHT_DECAY": 0.001,
+  "WARMUP_EPOCHS": 5,
+  "BEST_METRIC": "iou",
+  "STRONG_AUG": true,
+  "CLASS_WEIGHTS": [
+    0.5,
+    2.5,
+    3.5,
+    5.0,
+    3.0
+  ],
+  "source_run": "20260903_110705_v4_unified"
+}

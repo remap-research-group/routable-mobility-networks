@@ -1,0 +1,2025 @@
+{
+  "weights": "/media/cura/slieu3/RMN/repo/run/src",
+  "temperatures": {
+    "T_network": 1.8015257120132446,
+    "T_entrance": 1.6713649034500122,
+    "T_crosswalk": 1.5146324634552002
+  },
+  "params": {
+    "window": 512,
+    "overlap": 128,
+    "context_px": 192,
+    "crs_override": null,
+    "confidence_format": "uint8"
+  },
+  "confidence": "p = sigmoid(logit / T_head); uint8 rasters store p*255 with band scale 1/255",
+  "classes": {
+    "0": "background",
+    "1": "visible_sidewalk",
+    "2": "tree",
+    "3": "entrance",
+    "4": "crosswalk"
+  },
+  "images": [
+    {
+      "image": "19TCG285980_r00_c00.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 95.977,
+        "visible_sidewalk": 3.907,
+        "tree": 0.0,
+        "entrance": 0.116,
+        "crosswalk": 0.0
+      },
+      "mean_network_confidence": 0.0347,
+      "network_pixels_at_0.5": 107040,
+      "seconds": 27.7
+    },
+    {
+      "image": "19TCG285980_r00_c01.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 93.846,
+        "visible_sidewalk": 4.522,
+        "tree": 0.024,
+        "entrance": 0.785,
+        "crosswalk": 0.824
+      },
+      "mean_network_confidence": 0.0487,
+      "network_pixels_at_0.5": 156651,
+      "seconds": 12.5
+    },
+    {
+      "image": "19TCG285980_r00_c02.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.601,
+        "visible_sidewalk": 5.396,
+        "tree": 0.016,
+        "entrance": 1.488,
+        "crosswalk": 0.499
+      },
+      "mean_network_confidence": 0.0607,
+      "network_pixels_at_0.5": 204783,
+      "seconds": 10.7
+    },
+    {
+      "image": "19TCG285980_r00_c03.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 90.823,
+        "visible_sidewalk": 6.42,
+        "tree": 0.323,
+        "entrance": 1.223,
+        "crosswalk": 1.211
+      },
+      "mean_network_confidence": 0.072,
+      "network_pixels_at_0.5": 232705,
+      "seconds": 19.1
+    },
+    {
+      "image": "19TCG285980_r00_c04.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.855,
+        "visible_sidewalk": 2.346,
+        "tree": 0.149,
+        "entrance": 0.523,
+        "crosswalk": 0.126
+      },
+      "mean_network_confidence": 0.0271,
+      "network_pixels_at_0.5": 81342,
+      "seconds": 6.6
+    },
+    {
+      "image": "19TCG285980_r00_c05.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 97.647,
+        "visible_sidewalk": 2.083,
+        "tree": 0.0,
+        "entrance": 0.214,
+        "crosswalk": 0.055
+      },
+      "mean_network_confidence": 0.0219,
+      "network_pixels_at_0.5": 58592,
+      "seconds": 7.4
+    },
+    {
+      "image": "19TCG285980_r00_c06.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.035,
+        "visible_sidewalk": 2.937,
+        "tree": 0.002,
+        "entrance": 0.49,
+        "crosswalk": 0.536
+      },
+      "mean_network_confidence": 0.032,
+      "network_pixels_at_0.5": 85457,
+      "seconds": 6.5
+    },
+    {
+      "image": "19TCG285980_r00_c07.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 91.257,
+        "visible_sidewalk": 5.935,
+        "tree": 0.046,
+        "entrance": 0.513,
+        "crosswalk": 2.248
+      },
+      "mean_network_confidence": 0.0654,
+      "network_pixels_at_0.5": 201029,
+      "seconds": 14.5
+    },
+    {
+      "image": "19TCG285980_r00_c08.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 91.51,
+        "visible_sidewalk": 6.833,
+        "tree": 0.002,
+        "entrance": 0.465,
+        "crosswalk": 1.19
+      },
+      "mean_network_confidence": 0.063,
+      "network_pixels_at_0.5": 191516,
+      "seconds": 14.9
+    },
+    {
+      "image": "19TCG285980_r00_c09.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 90.784,
+        "visible_sidewalk": 6.006,
+        "tree": 0.014,
+        "entrance": 0.894,
+        "crosswalk": 2.301
+      },
+      "mean_network_confidence": 0.0717,
+      "network_pixels_at_0.5": 221822,
+      "seconds": 12.0
+    },
+    {
+      "image": "19TCG285980_r01_c00.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 99.013,
+        "visible_sidewalk": 0.828,
+        "tree": 0.0,
+        "entrance": 0.159,
+        "crosswalk": 0.0
+      },
+      "mean_network_confidence": 0.0112,
+      "network_pixels_at_0.5": 27273,
+      "seconds": 20.9
+    },
+    {
+      "image": "19TCG285980_r01_c01.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 91.008,
+        "visible_sidewalk": 6.531,
+        "tree": 0.219,
+        "entrance": 1.163,
+        "crosswalk": 1.079
+      },
+      "mean_network_confidence": 0.072,
+      "network_pixels_at_0.5": 238071,
+      "seconds": 18.8
+    },
+    {
+      "image": "19TCG285980_r01_c02.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 87.761,
+        "visible_sidewalk": 9.44,
+        "tree": 0.01,
+        "entrance": 1.044,
+        "crosswalk": 1.745
+      },
+      "mean_network_confidence": 0.1015,
+      "network_pixels_at_0.5": 343965,
+      "seconds": 21.3
+    },
+    {
+      "image": "19TCG285980_r01_c03.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 88.877,
+        "visible_sidewalk": 8.657,
+        "tree": 0.112,
+        "entrance": 1.716,
+        "crosswalk": 0.638
+      },
+      "mean_network_confidence": 0.0893,
+      "network_pixels_at_0.5": 296314,
+      "seconds": 32.8
+    },
+    {
+      "image": "19TCG285980_r01_c04.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 87.986,
+        "visible_sidewalk": 8.861,
+        "tree": 0.137,
+        "entrance": 1.389,
+        "crosswalk": 1.627
+      },
+      "mean_network_confidence": 0.0907,
+      "network_pixels_at_0.5": 300188,
+      "seconds": 23.5
+    },
+    {
+      "image": "19TCG285980_r01_c05.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 90.24,
+        "visible_sidewalk": 7.612,
+        "tree": 0.014,
+        "entrance": 0.526,
+        "crosswalk": 1.607
+      },
+      "mean_network_confidence": 0.073,
+      "network_pixels_at_0.5": 228755,
+      "seconds": 14.6
+    },
+    {
+      "image": "19TCG285980_r01_c06.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 89.506,
+        "visible_sidewalk": 8.908,
+        "tree": 0.012,
+        "entrance": 0.561,
+        "crosswalk": 1.013
+      },
+      "mean_network_confidence": 0.0773,
+      "network_pixels_at_0.5": 241348,
+      "seconds": 12.5
+    },
+    {
+      "image": "19TCG285980_r01_c07.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 90.221,
+        "visible_sidewalk": 8.336,
+        "tree": 0.01,
+        "entrance": 0.528,
+        "crosswalk": 0.906
+      },
+      "mean_network_confidence": 0.0743,
+      "network_pixels_at_0.5": 235918,
+      "seconds": 9.2
+    },
+    {
+      "image": "19TCG285980_r01_c08.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 91.875,
+        "visible_sidewalk": 6.83,
+        "tree": 0.003,
+        "entrance": 0.772,
+        "crosswalk": 0.52
+      },
+      "mean_network_confidence": 0.0599,
+      "network_pixels_at_0.5": 187649,
+      "seconds": 10.3
+    },
+    {
+      "image": "19TCG285980_r01_c09.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.643,
+        "visible_sidewalk": 5.831,
+        "tree": 0.007,
+        "entrance": 0.322,
+        "crosswalk": 1.196
+      },
+      "mean_network_confidence": 0.0565,
+      "network_pixels_at_0.5": 174897,
+      "seconds": 15.4
+    },
+    {
+      "image": "19TCG285980_r02_c00.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 89.437,
+        "visible_sidewalk": 8.497,
+        "tree": 0.007,
+        "entrance": 1.41,
+        "crosswalk": 0.648
+      },
+      "mean_network_confidence": 0.0824,
+      "network_pixels_at_0.5": 278077,
+      "seconds": 17.8
+    },
+    {
+      "image": "19TCG285980_r02_c01.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.825,
+        "visible_sidewalk": 4.115,
+        "tree": 0.077,
+        "entrance": 0.747,
+        "crosswalk": 0.236
+      },
+      "mean_network_confidence": 0.0391,
+      "network_pixels_at_0.5": 126674,
+      "seconds": 11.6
+    },
+    {
+      "image": "19TCG285980_r02_c02.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.535,
+        "visible_sidewalk": 5.367,
+        "tree": 0.002,
+        "entrance": 0.671,
+        "crosswalk": 1.425
+      },
+      "mean_network_confidence": 0.0543,
+      "network_pixels_at_0.5": 172395,
+      "seconds": 17.1
+    },
+    {
+      "image": "19TCG285980_r02_c03.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.028,
+        "visible_sidewalk": 4.84,
+        "tree": 0.009,
+        "entrance": 1.0,
+        "crosswalk": 0.124
+      },
+      "mean_network_confidence": 0.0472,
+      "network_pixels_at_0.5": 156834,
+      "seconds": 16.6
+    },
+    {
+      "image": "19TCG285980_r02_c04.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 95.049,
+        "visible_sidewalk": 3.811,
+        "tree": 0.004,
+        "entrance": 0.721,
+        "crosswalk": 0.414
+      },
+      "mean_network_confidence": 0.0398,
+      "network_pixels_at_0.5": 124621,
+      "seconds": 13.1
+    },
+    {
+      "image": "19TCG285980_r02_c05.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 89.642,
+        "visible_sidewalk": 7.531,
+        "tree": 0.007,
+        "entrance": 0.592,
+        "crosswalk": 2.227
+      },
+      "mean_network_confidence": 0.0781,
+      "network_pixels_at_0.5": 252524,
+      "seconds": 12.4
+    },
+    {
+      "image": "19TCG285980_r02_c06.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 91.697,
+        "visible_sidewalk": 6.506,
+        "tree": 0.007,
+        "entrance": 0.254,
+        "crosswalk": 1.536
+      },
+      "mean_network_confidence": 0.0613,
+      "network_pixels_at_0.5": 192206,
+      "seconds": 10.0
+    },
+    {
+      "image": "19TCG285980_r02_c07.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.019,
+        "visible_sidewalk": 5.923,
+        "tree": 0.008,
+        "entrance": 0.338,
+        "crosswalk": 1.712
+      },
+      "mean_network_confidence": 0.0643,
+      "network_pixels_at_0.5": 200116,
+      "seconds": 12.3
+    },
+    {
+      "image": "19TCG285980_r02_c08.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 87.912,
+        "visible_sidewalk": 9.334,
+        "tree": 0.009,
+        "entrance": 0.762,
+        "crosswalk": 1.983
+      },
+      "mean_network_confidence": 0.0881,
+      "network_pixels_at_0.5": 275378,
+      "seconds": 3.2
+    },
+    {
+      "image": "19TCG285980_r02_c09.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 83.032,
+        "visible_sidewalk": 12.17,
+        "tree": 0.037,
+        "entrance": 0.738,
+        "crosswalk": 4.022
+      },
+      "mean_network_confidence": 0.1341,
+      "network_pixels_at_0.5": 443172,
+      "seconds": 10.0
+    },
+    {
+      "image": "19TCG285980_r03_c00.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.08,
+        "visible_sidewalk": 4.297,
+        "tree": 0.178,
+        "entrance": 1.028,
+        "crosswalk": 0.417
+      },
+      "mean_network_confidence": 0.0417,
+      "network_pixels_at_0.5": 132098,
+      "seconds": 6.4
+    },
+    {
+      "image": "19TCG285980_r03_c01.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.899,
+        "visible_sidewalk": 2.403,
+        "tree": 0.002,
+        "entrance": 0.547,
+        "crosswalk": 0.148
+      },
+      "mean_network_confidence": 0.0269,
+      "network_pixels_at_0.5": 83823,
+      "seconds": 5.7
+    },
+    {
+      "image": "19TCG285980_r03_c02.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 93.373,
+        "visible_sidewalk": 5.118,
+        "tree": 0.006,
+        "entrance": 0.689,
+        "crosswalk": 0.815
+      },
+      "mean_network_confidence": 0.0524,
+      "network_pixels_at_0.5": 166294,
+      "seconds": 8.4
+    },
+    {
+      "image": "19TCG285980_r03_c03.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.311,
+        "visible_sidewalk": 2.684,
+        "tree": 0.315,
+        "entrance": 0.622,
+        "crosswalk": 0.069
+      },
+      "mean_network_confidence": 0.0285,
+      "network_pixels_at_0.5": 87523,
+      "seconds": 4.9
+    },
+    {
+      "image": "19TCG285980_r03_c04.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.049,
+        "visible_sidewalk": 3.104,
+        "tree": 0.11,
+        "entrance": 0.303,
+        "crosswalk": 0.435
+      },
+      "mean_network_confidence": 0.0297,
+      "network_pixels_at_0.5": 84353,
+      "seconds": 4.0
+    },
+    {
+      "image": "19TCG285980_r03_c05.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.311,
+        "visible_sidewalk": 2.723,
+        "tree": 0.0,
+        "entrance": 0.916,
+        "crosswalk": 0.05
+      },
+      "mean_network_confidence": 0.0289,
+      "network_pixels_at_0.5": 86655,
+      "seconds": 3.4
+    },
+    {
+      "image": "19TCG285980_r03_c06.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 99.787,
+        "visible_sidewalk": 0.204,
+        "tree": 0.0,
+        "entrance": 0.008,
+        "crosswalk": 0.001
+      },
+      "mean_network_confidence": 0.0049,
+      "network_pixels_at_0.5": 5400,
+      "seconds": 3.2
+    },
+    {
+      "image": "19TCG285980_r03_c07.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 97.95,
+        "visible_sidewalk": 1.608,
+        "tree": 0.009,
+        "entrance": 0.067,
+        "crosswalk": 0.366
+      },
+      "mean_network_confidence": 0.0179,
+      "network_pixels_at_0.5": 46575,
+      "seconds": 4.6
+    },
+    {
+      "image": "19TCG285980_r03_c08.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.507,
+        "visible_sidewalk": 4.345,
+        "tree": 0.001,
+        "entrance": 0.378,
+        "crosswalk": 0.77
+      },
+      "mean_network_confidence": 0.0437,
+      "network_pixels_at_0.5": 131984,
+      "seconds": 7.7
+    },
+    {
+      "image": "19TCG285980_r03_c09.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.145,
+        "visible_sidewalk": 4.824,
+        "tree": 0.01,
+        "entrance": 0.825,
+        "crosswalk": 2.196
+      },
+      "mean_network_confidence": 0.0633,
+      "network_pixels_at_0.5": 203543,
+      "seconds": 14.0
+    },
+    {
+      "image": "19TCG285980_r04_c00.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 91.287,
+        "visible_sidewalk": 7.032,
+        "tree": 0.005,
+        "entrance": 1.581,
+        "crosswalk": 0.094
+      },
+      "mean_network_confidence": 0.0688,
+      "network_pixels_at_0.5": 233838,
+      "seconds": 8.2
+    },
+    {
+      "image": "19TCG285980_r04_c01.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 90.612,
+        "visible_sidewalk": 7.022,
+        "tree": 0.01,
+        "entrance": 1.12,
+        "crosswalk": 1.235
+      },
+      "mean_network_confidence": 0.0744,
+      "network_pixels_at_0.5": 250280,
+      "seconds": 13.5
+    },
+    {
+      "image": "19TCG285980_r04_c02.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 88.912,
+        "visible_sidewalk": 8.058,
+        "tree": 0.008,
+        "entrance": 1.001,
+        "crosswalk": 2.02
+      },
+      "mean_network_confidence": 0.0835,
+      "network_pixels_at_0.5": 280639,
+      "seconds": 13.4
+    },
+    {
+      "image": "19TCG285980_r04_c03.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.597,
+        "visible_sidewalk": 4.225,
+        "tree": 0.015,
+        "entrance": 1.135,
+        "crosswalk": 0.028
+      },
+      "mean_network_confidence": 0.0425,
+      "network_pixels_at_0.5": 138883,
+      "seconds": 19.0
+    },
+    {
+      "image": "19TCG285980_r04_c04.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.956,
+        "visible_sidewalk": 3.641,
+        "tree": 0.005,
+        "entrance": 0.461,
+        "crosswalk": 0.937
+      },
+      "mean_network_confidence": 0.0375,
+      "network_pixels_at_0.5": 114388,
+      "seconds": 11.0
+    },
+    {
+      "image": "19TCG285980_r04_c05.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 93.785,
+        "visible_sidewalk": 4.445,
+        "tree": 0.042,
+        "entrance": 0.467,
+        "crosswalk": 1.261
+      },
+      "mean_network_confidence": 0.0487,
+      "network_pixels_at_0.5": 145168,
+      "seconds": 13.2
+    },
+    {
+      "image": "19TCG285980_r04_c06.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 95.991,
+        "visible_sidewalk": 2.265,
+        "tree": 0.004,
+        "entrance": 0.235,
+        "crosswalk": 1.505
+      },
+      "mean_network_confidence": 0.033,
+      "network_pixels_at_0.5": 94987,
+      "seconds": 9.0
+    },
+    {
+      "image": "19TCG285980_r04_c07.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.168,
+        "visible_sidewalk": 3.233,
+        "tree": 0.005,
+        "entrance": 0.528,
+        "crosswalk": 0.065
+      },
+      "mean_network_confidence": 0.0315,
+      "network_pixels_at_0.5": 97434,
+      "seconds": 8.4
+    },
+    {
+      "image": "19TCG285980_r04_c08.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.974,
+        "visible_sidewalk": 2.051,
+        "tree": 0.0,
+        "entrance": 0.923,
+        "crosswalk": 0.051
+      },
+      "mean_network_confidence": 0.0252,
+      "network_pixels_at_0.5": 70430,
+      "seconds": 7.0
+    },
+    {
+      "image": "19TCG285980_r04_c09.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 91.639,
+        "visible_sidewalk": 5.572,
+        "tree": 0.006,
+        "entrance": 1.799,
+        "crosswalk": 0.984
+      },
+      "mean_network_confidence": 0.0619,
+      "network_pixels_at_0.5": 196562,
+      "seconds": 6.5
+    },
+    {
+      "image": "19TCG285980_r05_c00.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.672,
+        "visible_sidewalk": 5.859,
+        "tree": 0.026,
+        "entrance": 1.444,
+        "crosswalk": 0.0
+      },
+      "mean_network_confidence": 0.0628,
+      "network_pixels_at_0.5": 213836,
+      "seconds": 16.0
+    },
+    {
+      "image": "19TCG285980_r05_c01.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 89.892,
+        "visible_sidewalk": 7.577,
+        "tree": 0.09,
+        "entrance": 1.507,
+        "crosswalk": 0.935
+      },
+      "mean_network_confidence": 0.0837,
+      "network_pixels_at_0.5": 287477,
+      "seconds": 15.9
+    },
+    {
+      "image": "19TCG285980_r05_c02.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 88.191,
+        "visible_sidewalk": 9.175,
+        "tree": 0.115,
+        "entrance": 1.116,
+        "crosswalk": 1.403
+      },
+      "mean_network_confidence": 0.0931,
+      "network_pixels_at_0.5": 318820,
+      "seconds": 13.1
+    },
+    {
+      "image": "19TCG285980_r05_c03.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.498,
+        "visible_sidewalk": 6.278,
+        "tree": 0.011,
+        "entrance": 1.067,
+        "crosswalk": 0.146
+      },
+      "mean_network_confidence": 0.0627,
+      "network_pixels_at_0.5": 215010,
+      "seconds": 9.4
+    },
+    {
+      "image": "19TCG285980_r05_c04.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 97.026,
+        "visible_sidewalk": 2.0,
+        "tree": 0.005,
+        "entrance": 0.24,
+        "crosswalk": 0.729
+      },
+      "mean_network_confidence": 0.0255,
+      "network_pixels_at_0.5": 72540,
+      "seconds": 9.1
+    },
+    {
+      "image": "19TCG285980_r05_c05.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.909,
+        "visible_sidewalk": 1.69,
+        "tree": 0.003,
+        "entrance": 0.179,
+        "crosswalk": 1.218
+      },
+      "mean_network_confidence": 0.0205,
+      "network_pixels_at_0.5": 56288,
+      "seconds": 5.6
+    },
+    {
+      "image": "19TCG285980_r05_c06.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 98.684,
+        "visible_sidewalk": 1.121,
+        "tree": 0.0,
+        "entrance": 0.195,
+        "crosswalk": 0.0
+      },
+      "mean_network_confidence": 0.0126,
+      "network_pixels_at_0.5": 33532,
+      "seconds": 11.4
+    },
+    {
+      "image": "19TCG285980_r05_c07.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 99.268,
+        "visible_sidewalk": 0.697,
+        "tree": 0.0,
+        "entrance": 0.035,
+        "crosswalk": 0.0
+      },
+      "mean_network_confidence": 0.0093,
+      "network_pixels_at_0.5": 15907,
+      "seconds": 20.6
+    },
+    {
+      "image": "19TCG285980_r05_c08.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 95.423,
+        "visible_sidewalk": 3.556,
+        "tree": 0.0,
+        "entrance": 0.99,
+        "crosswalk": 0.031
+      },
+      "mean_network_confidence": 0.0347,
+      "network_pixels_at_0.5": 105487,
+      "seconds": 16.1
+    },
+    {
+      "image": "19TCG285980_r05_c09.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.0,
+        "visible_sidewalk": 4.702,
+        "tree": 0.004,
+        "entrance": 0.55,
+        "crosswalk": 0.743
+      },
+      "mean_network_confidence": 0.0477,
+      "network_pixels_at_0.5": 153105,
+      "seconds": 12.3
+    },
+    {
+      "image": "19TCG285980_r06_c00.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 93.1,
+        "visible_sidewalk": 6.151,
+        "tree": 0.002,
+        "entrance": 0.389,
+        "crosswalk": 0.358
+      },
+      "mean_network_confidence": 0.0574,
+      "network_pixels_at_0.5": 187395,
+      "seconds": 13.4
+    },
+    {
+      "image": "19TCG285980_r06_c01.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.841,
+        "visible_sidewalk": 5.715,
+        "tree": 0.098,
+        "entrance": 0.724,
+        "crosswalk": 0.622
+      },
+      "mean_network_confidence": 0.0587,
+      "network_pixels_at_0.5": 198324,
+      "seconds": 14.0
+    },
+    {
+      "image": "19TCG285980_r06_c02.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 91.54,
+        "visible_sidewalk": 6.057,
+        "tree": 0.04,
+        "entrance": 0.985,
+        "crosswalk": 1.378
+      },
+      "mean_network_confidence": 0.0609,
+      "network_pixels_at_0.5": 195765,
+      "seconds": 6.8
+    },
+    {
+      "image": "19TCG285980_r06_c03.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.743,
+        "visible_sidewalk": 6.17,
+        "tree": 0.008,
+        "entrance": 0.87,
+        "crosswalk": 0.209
+      },
+      "mean_network_confidence": 0.0585,
+      "network_pixels_at_0.5": 195682,
+      "seconds": 6.8
+    },
+    {
+      "image": "19TCG285980_r06_c04.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 97.556,
+        "visible_sidewalk": 1.712,
+        "tree": 0.0,
+        "entrance": 0.231,
+        "crosswalk": 0.501
+      },
+      "mean_network_confidence": 0.0191,
+      "network_pixels_at_0.5": 51988,
+      "seconds": 11.4
+    },
+    {
+      "image": "19TCG285980_r06_c05.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.765,
+        "visible_sidewalk": 2.61,
+        "tree": 0.0,
+        "entrance": 0.609,
+        "crosswalk": 0.017
+      },
+      "mean_network_confidence": 0.0275,
+      "network_pixels_at_0.5": 79459,
+      "seconds": 13.0
+    },
+    {
+      "image": "19TCG285980_r06_c06.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 97.545,
+        "visible_sidewalk": 2.27,
+        "tree": 0.0,
+        "entrance": 0.174,
+        "crosswalk": 0.011
+      },
+      "mean_network_confidence": 0.021,
+      "network_pixels_at_0.5": 56815,
+      "seconds": 8.9
+    },
+    {
+      "image": "19TCG285980_r06_c07.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.706,
+        "visible_sidewalk": 3.01,
+        "tree": 0.0,
+        "entrance": 0.152,
+        "crosswalk": 0.131
+      },
+      "mean_network_confidence": 0.0257,
+      "network_pixels_at_0.5": 71041,
+      "seconds": 6.4
+    },
+    {
+      "image": "19TCG285980_r06_c08.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.876,
+        "visible_sidewalk": 3.924,
+        "tree": 0.003,
+        "entrance": 0.585,
+        "crosswalk": 0.612
+      },
+      "mean_network_confidence": 0.0379,
+      "network_pixels_at_0.5": 115646,
+      "seconds": 4.5
+    },
+    {
+      "image": "19TCG285980_r06_c09.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 87.624,
+        "visible_sidewalk": 11.377,
+        "tree": 0.001,
+        "entrance": 0.71,
+        "crosswalk": 0.288
+      },
+      "mean_network_confidence": 0.0972,
+      "network_pixels_at_0.5": 329399,
+      "seconds": 4.3
+    },
+    {
+      "image": "19TCG285980_r07_c00.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.613,
+        "visible_sidewalk": 4.227,
+        "tree": 0.003,
+        "entrance": 0.84,
+        "crosswalk": 0.317
+      },
+      "mean_network_confidence": 0.0424,
+      "network_pixels_at_0.5": 139270,
+      "seconds": 15.9
+    },
+    {
+      "image": "19TCG285980_r07_c01.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 93.852,
+        "visible_sidewalk": 5.106,
+        "tree": 0.001,
+        "entrance": 0.721,
+        "crosswalk": 0.321
+      },
+      "mean_network_confidence": 0.0505,
+      "network_pixels_at_0.5": 169070,
+      "seconds": 19.3
+    },
+    {
+      "image": "19TCG285980_r07_c02.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.19,
+        "visible_sidewalk": 4.37,
+        "tree": 0.003,
+        "entrance": 0.492,
+        "crosswalk": 0.944
+      },
+      "mean_network_confidence": 0.0464,
+      "network_pixels_at_0.5": 150664,
+      "seconds": 11.3
+    },
+    {
+      "image": "19TCG285980_r07_c03.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.003,
+        "visible_sidewalk": 4.845,
+        "tree": 0.002,
+        "entrance": 0.962,
+        "crosswalk": 0.189
+      },
+      "mean_network_confidence": 0.0472,
+      "network_pixels_at_0.5": 155091,
+      "seconds": 14.5
+    },
+    {
+      "image": "19TCG285980_r07_c04.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 97.76,
+        "visible_sidewalk": 1.925,
+        "tree": 0.0,
+        "entrance": 0.287,
+        "crosswalk": 0.027
+      },
+      "mean_network_confidence": 0.0192,
+      "network_pixels_at_0.5": 57427,
+      "seconds": 20.4
+    },
+    {
+      "image": "19TCG285980_r07_c05.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 99.911,
+        "visible_sidewalk": 0.07,
+        "tree": 0.0,
+        "entrance": 0.02,
+        "crosswalk": 0.0
+      },
+      "mean_network_confidence": 0.0037,
+      "network_pixels_at_0.5": 1077,
+      "seconds": 11.6
+    },
+    {
+      "image": "19TCG285980_r07_c06.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 97.277,
+        "visible_sidewalk": 2.596,
+        "tree": 0.0,
+        "entrance": 0.104,
+        "crosswalk": 0.023
+      },
+      "mean_network_confidence": 0.0235,
+      "network_pixels_at_0.5": 67982,
+      "seconds": 9.7
+    },
+    {
+      "image": "19TCG285980_r07_c07.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 98.019,
+        "visible_sidewalk": 1.55,
+        "tree": 0.001,
+        "entrance": 0.229,
+        "crosswalk": 0.201
+      },
+      "mean_network_confidence": 0.0192,
+      "network_pixels_at_0.5": 46944,
+      "seconds": 15.5
+    },
+    {
+      "image": "19TCG285980_r07_c08.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.893,
+        "visible_sidewalk": 5.811,
+        "tree": 0.0,
+        "entrance": 0.857,
+        "crosswalk": 0.438
+      },
+      "mean_network_confidence": 0.0516,
+      "network_pixels_at_0.5": 168292,
+      "seconds": 11.6
+    },
+    {
+      "image": "19TCG285980_r07_c09.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 98.352,
+        "visible_sidewalk": 1.336,
+        "tree": 0.0,
+        "entrance": 0.312,
+        "crosswalk": 0.001
+      },
+      "mean_network_confidence": 0.0148,
+      "network_pixels_at_0.5": 38954,
+      "seconds": 26.1
+    },
+    {
+      "image": "19TCG285980_r08_c00.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.534,
+        "visible_sidewalk": 5.671,
+        "tree": 0.02,
+        "entrance": 1.076,
+        "crosswalk": 0.699
+      },
+      "mean_network_confidence": 0.0616,
+      "network_pixels_at_0.5": 204820,
+      "seconds": 14.2
+    },
+    {
+      "image": "19TCG285980_r08_c01.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.385,
+        "visible_sidewalk": 4.644,
+        "tree": 0.002,
+        "entrance": 0.84,
+        "crosswalk": 0.129
+      },
+      "mean_network_confidence": 0.0473,
+      "network_pixels_at_0.5": 158622,
+      "seconds": 10.1
+    },
+    {
+      "image": "19TCG285980_r08_c02.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 93.729,
+        "visible_sidewalk": 4.061,
+        "tree": 0.009,
+        "entrance": 0.673,
+        "crosswalk": 1.528
+      },
+      "mean_network_confidence": 0.0514,
+      "network_pixels_at_0.5": 167135,
+      "seconds": 2.6
+    },
+    {
+      "image": "19TCG285980_r08_c03.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 93.992,
+        "visible_sidewalk": 4.969,
+        "tree": 0.005,
+        "entrance": 0.267,
+        "crosswalk": 0.767
+      },
+      "mean_network_confidence": 0.0481,
+      "network_pixels_at_0.5": 157902,
+      "seconds": 3.2
+    },
+    {
+      "image": "19TCG285980_r08_c04.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.622,
+        "visible_sidewalk": 3.622,
+        "tree": 0.004,
+        "entrance": 0.038,
+        "crosswalk": 1.713
+      },
+      "mean_network_confidence": 0.0436,
+      "network_pixels_at_0.5": 135324,
+      "seconds": 14.6
+    },
+    {
+      "image": "19TCG285980_r08_c05.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.958,
+        "visible_sidewalk": 2.598,
+        "tree": 0.0,
+        "entrance": 0.36,
+        "crosswalk": 0.084
+      },
+      "mean_network_confidence": 0.0265,
+      "network_pixels_at_0.5": 80886,
+      "seconds": 16.6
+    },
+    {
+      "image": "19TCG285980_r08_c06.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.223,
+        "visible_sidewalk": 4.302,
+        "tree": 0.004,
+        "entrance": 0.254,
+        "crosswalk": 1.218
+      },
+      "mean_network_confidence": 0.0455,
+      "network_pixels_at_0.5": 136701,
+      "seconds": 4.8
+    },
+    {
+      "image": "19TCG285980_r08_c07.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.936,
+        "visible_sidewalk": 3.616,
+        "tree": 0.002,
+        "entrance": 0.535,
+        "crosswalk": 0.911
+      },
+      "mean_network_confidence": 0.0367,
+      "network_pixels_at_0.5": 108219,
+      "seconds": 7.9
+    },
+    {
+      "image": "19TCG285980_r08_c08.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.076,
+        "visible_sidewalk": 5.722,
+        "tree": 0.046,
+        "entrance": 0.976,
+        "crosswalk": 1.18
+      },
+      "mean_network_confidence": 0.0576,
+      "network_pixels_at_0.5": 180966,
+      "seconds": 5.3
+    },
+    {
+      "image": "19TCG285980_r08_c09.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 92.477,
+        "visible_sidewalk": 5.808,
+        "tree": 0.005,
+        "entrance": 1.066,
+        "crosswalk": 0.645
+      },
+      "mean_network_confidence": 0.0586,
+      "network_pixels_at_0.5": 194553,
+      "seconds": 8.0
+    },
+    {
+      "image": "19TCG285980_r09_c00.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 97.399,
+        "visible_sidewalk": 2.068,
+        "tree": 0.0,
+        "entrance": 0.533,
+        "crosswalk": 0.0
+      },
+      "mean_network_confidence": 0.0228,
+      "network_pixels_at_0.5": 67124,
+      "seconds": 8.1
+    },
+    {
+      "image": "19TCG285980_r09_c01.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 95.356,
+        "visible_sidewalk": 4.014,
+        "tree": 0.0,
+        "entrance": 0.62,
+        "crosswalk": 0.01
+      },
+      "mean_network_confidence": 0.0386,
+      "network_pixels_at_0.5": 126190,
+      "seconds": 12.9
+    },
+    {
+      "image": "19TCG285980_r09_c02.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 93.16,
+        "visible_sidewalk": 4.614,
+        "tree": 0.024,
+        "entrance": 0.726,
+        "crosswalk": 1.477
+      },
+      "mean_network_confidence": 0.0543,
+      "network_pixels_at_0.5": 179674,
+      "seconds": 17.7
+    },
+    {
+      "image": "19TCG285980_r09_c03.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.993,
+        "visible_sidewalk": 3.976,
+        "tree": 0.386,
+        "entrance": 0.362,
+        "crosswalk": 0.283
+      },
+      "mean_network_confidence": 0.0386,
+      "network_pixels_at_0.5": 119943,
+      "seconds": 14.4
+    },
+    {
+      "image": "19TCG285980_r09_c04.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 96.869,
+        "visible_sidewalk": 2.609,
+        "tree": 0.0,
+        "entrance": 0.414,
+        "crosswalk": 0.108
+      },
+      "mean_network_confidence": 0.0256,
+      "network_pixels_at_0.5": 74742,
+      "seconds": 9.3
+    },
+    {
+      "image": "19TCG285980_r09_c05.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 99.29,
+        "visible_sidewalk": 0.643,
+        "tree": 0.0,
+        "entrance": 0.038,
+        "crosswalk": 0.028
+      },
+      "mean_network_confidence": 0.009,
+      "network_pixels_at_0.5": 20799,
+      "seconds": 6.5
+    },
+    {
+      "image": "19TCG285980_r09_c06.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 99.69,
+        "visible_sidewalk": 0.307,
+        "tree": 0.0,
+        "entrance": 0.004,
+        "crosswalk": 0.0
+      },
+      "mean_network_confidence": 0.006,
+      "network_pixels_at_0.5": 8921,
+      "seconds": 15.8
+    },
+    {
+      "image": "19TCG285980_r09_c07.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 94.889,
+        "visible_sidewalk": 3.643,
+        "tree": 0.003,
+        "entrance": 0.592,
+        "crosswalk": 0.874
+      },
+      "mean_network_confidence": 0.039,
+      "network_pixels_at_0.5": 122458,
+      "seconds": 7.5
+    },
+    {
+      "image": "19TCG285980_r09_c08.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 91.483,
+        "visible_sidewalk": 6.557,
+        "tree": 0.012,
+        "entrance": 0.458,
+        "crosswalk": 1.49
+      },
+      "mean_network_confidence": 0.0681,
+      "network_pixels_at_0.5": 219189,
+      "seconds": 9.4
+    },
+    {
+      "image": "19TCG285980_r09_c09.tif",
+      "size_px": [
+        1875,
+        1875
+      ],
+      "georeferenced": true,
+      "crs": "EPSG:6348",
+      "resolution_m_per_px": 0.08,
+      "class_percent": {
+        "background": 93.541,
+        "visible_sidewalk": 5.552,
+        "tree": 0.008,
+        "entrance": 0.636,
+        "crosswalk": 0.263
+      },
+      "mean_network_confidence": 0.0516,
+      "network_pixels_at_0.5": 171414,
+      "seconds": 6.4
+    }
+  ]
+}

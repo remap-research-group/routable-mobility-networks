@@ -1,10 +1,10 @@
-# [TOOL NAME]
+# WalkTrace
 
 <p align="center">
-  <img src="images/overview.png" alt="Overview: aerial imagery to pedestrian network" width="92%">
+  <img src="misc/overview.png" alt="Overview: aerial imagery to pedestrian network" width="92%">
 </p>
 
-**[Tool Name]** is a tool for automated mapping of pedestrian infrastructure from aerial imagery. A dual-branch Swin Transformer segmentation model detects the components of the pedestrian network (i.e., sidewalks, footway, crosswalks, and midblock driveway entrances) including the portions hidden under tree canopy and shadows. The pixel predictions are converted into geo-referenced polygons with per-pixel confidence scores, and finally into a topologically connected centerline network of links and nodes, ready for pedestrian accessibility, connectivity, and routing analyses.
+**WalkTrace** is a tool for automated mapping of pedestrian infrastructure from aerial imagery. A dual-branch Swin Transformer segmentation model detects the components of the pedestrian network (i.e., sidewalks, footway, crosswalks, and midblock driveway entrances) including the portions hidden under tree canopy and shadows. The pixel predictions are converted into geo-referenced polygons with per-pixel confidence scores, and finally into a topologically connected centerline network of links and nodes, ready for pedestrian accessibility, connectivity, and routing analyses.
 
 <br>
 
@@ -19,7 +19,7 @@
 
 ## Updates
 
-* **[September 2026]** Version 0 released (trained on **###** labeled image tiles across **Boston** and **Atlanta**)
+* **[September 2026]** Version 0 released (trained on **1,018** labeled image tiles in Washington, DC: 514 from 2023 leaf-on and 504 from 2025 leaf-off imagery)
 
 <br>
 
@@ -50,65 +50,119 @@
 
 ### Installation
 
-We recommend a fresh virtual environment (conda or venv). Clone the repository:
+**1. Clone the repository** and enter the pedestrian-network folder:
 
 ```bash
-git clone https://github.com/<user>/<repo>.git
-cd <repo>
+git clone https://github.com/remap-research-group/routable-mobility-networks.git
+cd routable-mobility-networks/pedestrian_network
 ```
 
-Create and activate the environment, then install:
+**2. Create the environment.** Install PyTorch first — together with
+torchvision and from the index that matches your CUDA driver — then the
+remaining requirements:
 
 ```bash
-conda create --name pednet python=3.10
+conda create --name pednet python=3.10 -y
 conda activate pednet
-python -m pip install -r requirements.txt
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124   # cu121 / cu126 / cpu: see pytorch.org
+pip install -r requirements.txt
 ```
 
-Download the pretrained model weights (Version 0) from **[here](TODO-weights-link)** and place them in:
+**3. Download the pretrained weights.** The checkpoint (~240 MB) is too large
+for git and is attached to the GitHub Release
+[`pednet-v0.1`](https://github.com/remap-research-group/routable-mobility-networks/releases/tag/pednet-v0.1).
+`download.py` (standard library only) fetches it, verifies the checksum and
+puts it where the code expects it:
 
+```bash
+python download.py              # weights          -> run/src/best.pt
+python download.py --dataset    # + training data  -> train/v0_2026sep_image/dc_2023, dc_2025  (~2.4 GB, only for train/)
 ```
-src/weights/
-├── best.pt              # model checkpoint
-└── temperature.json     # per-head confidence calibration
-```
+
+Manual alternative: download `best.pt` from the release page into `run/src/`,
+and unzip `dc_2023.zip` / `dc_2025.zip` into `train/v0_2026sep_image/`.
+After step 3, `run/src/` holds everything the tool needs: `best.pt`,
+`temperature.json` (confidence calibration), `train_config.json`, `model_card.json`.
 
 ### Run Our Example
 
-The `example/` folder contains a small set of sample tiles and a ready-to-run script, so you can verify your environment, GPU, and the expected outputs before running your own data:
+`example/input/` contains three inputs so you can verify your environment,
+GPU and the expected outputs before running your own data: nine model-ready
+DC tiles from 2023 (leaf-on), the same nine tiles from 2025 (leaf-off), and
+one MassDOT JPEG2000 ortho that first has to be prepared (resampled to
+0.08 m/px and tiled). From `pedestrian_network/`:
 
 ```bash
-bash example/run_example.sh
+# A. model-ready tiles: inspect -> segment -> build the network
+python run/stage_1/segmentation.py --inspect --dir example/input/dc_2023
+python run/stage_1/segmentation.py --dir example/input/dc_2023 --out example/output/dc_2023
+
+python run/stage_2/build_network.py --input example/output/dc_2023
+
+# B. an ortho that needs preparing (0.15 m/px, 4-band, JPEG2000)
+python run/stage_1/segmentation.py --inspect --dir example/input/mass_2025
+python run/stage_1/prepare_image.py --dir example/input/mass_2025 --out example/output/mass_2025/prepared
+python run/stage_1/segmentation.py --dir example/output/mass_2025/prepared --out example/output/mass_2025 --overlay-px 1024
+
+python run/stage_2/build_network.py --input example/output/mass_2025
 ```
 
-This will (1) run segmentation inference on the sample tiles, writing per-pixel class maps and calibrated confidence rasters, and (2) construct the pedestrian network, writing:
+Every run starts by printing an inspection report of each input (format,
+size, bands, CRS, resolution, coverage, tiling advice) and a report of the
+loaded model. Stage 1 writes the per-pixel products, stage 2 the network:
 
 ```
-example/output/
-├── confidence/          # per-pixel confidence GeoTIFFs
-├── classes/             # 5-class prediction GeoTIFFs
-├── network_polygons.geojson   # pedestrian-network polygons
-├── skeleton.geojson           # centerline network (links + nodes)
-└── network_stats.json         # summary statistics
+example/output/dc_2023/
+├── classes/                  5-class prediction per tile (GeoTIFF)
+├── confidence/               calibrated confidence per tile: *_network, *_crosswalk, *_entrance
+├── overlay/                  quick-look JPEGs (imagery + class colours)
+├── stage1_summary.json
+└── network/
+    ├── links.geojson         centerline links (sidewalk | midblock | crosswalk | pseudo), length + width
+    ├── nodes.geojson         endpoints / junctions / type changes
+    ├── network_polygons.geojson   typed polygons, one per unique crosswalk
+    ├── *_wgs84.geojson       the same three layers in WGS84 lon/lat
+    ├── network_mask.tif      connected-network mosaic
+    └── network_stats.json    counts, km by type, parameters
 ```
+
+See [example/README.md](example/README.md) for details and
+[run/README.md](run/README.md) for every option.
 
 ### Run Your Project
 
-**1. Prepare your imagery.** Tile your orthorectified RGB imagery into georeferenced GeoTIFF tiles and place them in a single folder.
-
-**2. Run inference.** This runs the segmentation model tile by tile (sliding-window with blended overlaps) and writes class maps plus temperature-calibrated confidence rasters:
-
-```bash
-python src/inference.py --input <path/to/your/tiles> --output <path/to/output>
-```
-
-**3. Build the network.** This converts the rasters into the final products — connected network polygons and the skeletonized centerline network:
+**1. Inspect your imagery.** Put your orthorectified RGB imagery (any GDAL
+raster: GeoTIFF, JPEG2000, …) in one folder and let stage 1 report what it is
+and whether it is model-ready (georeferenced, 0.08 m/px):
 
 ```bash
-python src/build_network.py --input <path/to/output> --thr 0.5
+python run/stage_1/segmentation.py --inspect --dir <path/to/your/imagery>
 ```
 
-Useful parameters to tune for your region: `--thr` (confidence threshold for including a pixel in the network), `--gap-close-px` (closes small gaps between adjacent objects), `--min-spur-m` (prunes short dead-end centerline branches). Run either script with `--help` for the full list.
+**2. Prepare it if the report says `NEEDS PREPARE`** — other resolutions,
+extra bands, or one huge ortho. This resamples to 0.08 m/px, keeps RGB, and
+splits the result into tiles (`--tile-px`, default 2048):
+
+```bash
+python run/stage_1/prepare_image.py --dir <path/to/your/imagery> --out <path/to/prepared>
+```
+
+**3. Run inference (stage 1).** Segments every tile with a Hann-blended
+sliding window, padding each tile with imagery from its neighbours so there
+are no seams, and writes class maps plus temperature-calibrated confidence
+rasters:
+
+```bash
+python run/stage_1/segmentation.py --dir <path/to/prepared-or-ready tiles> --out <path/to/output>
+```
+
+**4. Build the network (stage 2, CPU only).** Mosaics all tiles, then
+converts the rasters into connected network polygons and the centerline
+graph of links and nodes:
+
+```bash
+python run/stage_2/build_network.py --input <path/to/output>
+```
 
 **Output classes**
 
@@ -122,13 +176,26 @@ Useful parameters to tune for your region: `--thr` (confidence threshold for inc
 
 Classes 1–4 together constitute the pedestrian network; the confidence rasters and centerline network are derived from their union.
 
+**Training your own model.** The released weights were trained on Washington,
+DC imagery. If your region or imagery differs enough that the predictions are
+weak, you can retrain or fine-tune the segmentation model on your own labeled
+tiles: the full training pipeline (dataset preparation from a CVAT export,
+training, calibration, evaluation, export) and the DC training dataset are in
+[`train/`](train/README.md). Exporting a run with
+`train/stage_1/5_export_weights.py` drops the new weights into `run/src/`, so
+the two run stages above pick them up without any other change. The
+network-construction stage has no trainable parameters and works with any
+model that produces the same five classes.
+
 <br>
 
 ## Repository Structure
 
 ```
-.
-├── example/     # sample tiles + script to test your setup (see Run Our Example)
-├── src/         # everything needed to run the tool: inference, network construction, weights
-└── training/    # how the model was trained: labeling protocol, training code, and dataset documentation
+pedestrian_network/
+├── download.py   # fetch the released weights (and optionally the training dataset)
+├── example/      # sample imagery (DC tiles, one MassDOT ortho) + expected outputs
+├── run/          # everything needed to run the tool: stage_1 segmentation, stage_2 network, src/ weights
+├── train/        # how the model was trained: training code (stage_1/) and dataset (v0_2026sep_image/, fetched by download.py --dataset)
+└── misc/
 ```

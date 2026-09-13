@@ -1,0 +1,17 @@
+# Runtime + training dependencies (Python 3.10 tested).
+#
+# Install PyTorch FIRST, together with torchvision, from the index that matches
+# your CUDA driver (https://pytorch.org/get-started/locally/), e.g.
+#     pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# then
+#     pip install -r requirements.txt
+# torch/torchvision are deliberately not listed here: pip would otherwise pull
+# the newest CUDA build from PyPI, which may not match your driver.
+timm>=1.0
+albumentations>=1.4        # training only
+rasterio>=1.3              # PyPI wheels bundle GDAL with the JPEG2000 driver (prepare_image.py)
+shapely>=2.0
+scipy>=1.10
+scikit-image>=0.21
+numpy>=1.24
+Pillow>=9.0

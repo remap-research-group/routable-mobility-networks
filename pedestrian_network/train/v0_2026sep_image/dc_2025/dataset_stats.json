@@ -1,0 +1,17 @@
+{
+  "n_tiles": 504,
+  "pixels": {
+    "background": 481333746,
+    "visible_sidewalk": 40622380,
+    "tree": 38099,
+    "entrance": 1311443,
+    "crosswalk": 5176636
+  },
+  "percent": {
+    "background": 91.07849824996222,
+    "visible_sidewalk": 7.6866112058124845,
+    "tree": 0.007209134480309865,
+    "entrance": 0.24815267986721462,
+    "crosswalk": 0.9795287298777747
+  }
+}
