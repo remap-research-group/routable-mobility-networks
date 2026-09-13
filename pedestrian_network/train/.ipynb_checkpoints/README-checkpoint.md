@@ -10,8 +10,8 @@ train/
 ├── v0_2026sep_image/        # finalized training data: DC 2023 + 2025 tiles
 │   ├── dc_2023/             # 514 tiles
 │   ├── dc_2025/             # 504 tiles
-│   │   ├── images/tile_<TX>_<TY>.tif   RGB aerial GeoTIFF, 1024×1024 px, 0.08 m/px
-│   │   ├── masks/tile_<TX>_<TY>.tif    uint8 class-index GeoTIFF, ONE band, values 0–4
+│   │   ├── images/tile_<TX>_<TY>.tif   RGB aerial GeoTIFF, 1024×1024 px, 0.08 m/px   ┐ NOT in git: fetched from the
+│   │   ├── masks/tile_<TX>_<TY>.tif    uint8 class-index GeoTIFF, ONE band, values 0–4 ┘ release by `python download.py --dataset`
 │   │   ├── splits.json                 fixed train/val/test split (8:1:1, seed 42)
 │   │   └── dataset_stats.json          per-year pixel statistics
 │   └── combined_dataset_stats.json     combined class weights read by 2_train.py
@@ -136,6 +136,7 @@ shared library they import. `main.py` chains the five steps.
 
 ```bash
 conda activate pednet                 # the same env as run/ (see run/README.md → Setup)
+python download.py --dataset          # once, from pedestrian_network/: fetch images/ + masks/ (~2.4 GB) from the release
 cd train/stage_1
 
 python 2_train.py --name v4_unified   # long (~120 epochs); run inside tmux; resumable with --resume <run_dir>

@@ -22,6 +22,7 @@
 * **[September 2026]** Version 0 released (trained on **1,018** labeled image tiles in Washington, DC: 514 from 2023 leaf-on and 504 from 2025 leaf-off imagery)
 
 <br>
+<br>
 
 ## Getting Started
 
@@ -47,6 +48,8 @@
 
 * Orthorectified RGB aerial imagery (recommended at a ground sampling distance of ~0.08 m/px).
 * Either on-leaf or off-leaf imagery is supported; see [Run Your Project](#run-your-project) for how to prepare your own tiles.
+
+<br>
 
 ### Installation
 
@@ -83,6 +86,8 @@ Manual alternative: download `best.pt` from the release page into `run/src/`,
 and unzip `dc_2023.zip` / `dc_2025.zip` into `train/v0_2026sep_image/`.
 After step 3, `run/src/` holds everything the tool needs: `best.pt`,
 `temperature.json` (confidence calibration), `train_config.json`, `model_card.json`.
+
+<br>
 
 ### Run Our Example
 
@@ -126,8 +131,11 @@ example/output/dc_2023/
     └── network_stats.json    counts, km by type, parameters
 ```
 
-See [example/README.md](example/README.md) for details and
-[run/README.md](run/README.md) for every option.
+See [example/README.md](example/README.md) for details,
+[run/README.md](run/README.md) for the output formats, and each script's header
+(or `--help`) for every option.
+
+<br>
 
 ### Run Your Project
 
@@ -187,6 +195,7 @@ the two run stages above pick them up without any other change. The
 network-construction stage has no trainable parameters and works with any
 model that produces the same five classes.
 
+<br>
 <br>
 
 ## Repository Structure

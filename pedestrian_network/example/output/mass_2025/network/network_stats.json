@@ -1,0 +1,102 @@
+{
+  "mosaic_px": [
+    18750,
+    18750
+  ],
+  "resolution_m_per_px": 0.08,
+  "crs": "EPSG:6348",
+  "params": {
+    "crs": null,
+    "res": 0.08,
+    "chunk_px": 1024,
+    "thr": 0.5,
+    "gap_close_px": 2,
+    "max_hole_m2": 5.0,
+    "min_component_m2": 100.0,
+    "max_snap_px": 25,
+    "connector_width_px": 3,
+    "buffer_m": 5.0,
+    "min_spur_m": 3.0,
+    "dangle_max_m": 8.0,
+    "dangle_keep_m": 2.0,
+    "max_pseudo_m": 4.0,
+    "poly_smooth_m": 0.2,
+    "poly_simplify_m": 0.3
+  },
+  "network_area_m2": 114859.6,
+  "crosswalk_clean_snap": {
+    "cw_px_added_by_close": 40657,
+    "cw_px_removed_by_open": 68317,
+    "speck_1->0": 6093,
+    "components": 414,
+    "already_touching": 384,
+    "connected": 5,
+    "dropped": 25,
+    "speck_3->0": 3201,
+    "speck_3->1": 368,
+    "holes_filled": 802,
+    "speck_1->4": 2014,
+    "speck_1->3": 285,
+    "speck_3->4": 902,
+    "seam_px_to_crosswalk": 23863,
+    "seam_px_to_walkable": 33468,
+    "speck_4->0": 296,
+    "speck_4->1": 84,
+    "speck_2->1": 35,
+    "speck_2->4": 65,
+    "speck_2->0": 44,
+    "rect_regularized": 100,
+    "speck_1->2": 4,
+    "speck_4->3": 24,
+    "speck_3->2": 1
+  },
+  "crosswalk_regions": 353,
+  "crosswalk_regions_kept": 304,
+  "unique_crossings": 416,
+  "axes_corrected": 69,
+  "midblock_erased": 60,
+  "dangles_removed": 127,
+  "links": {
+    "crosswalk": {
+      "n": 575,
+      "km": 4.123,
+      "avg_width_m": 2.29,
+      "min_width_m": 0.16
+    },
+    "midblock": {
+      "n": 719,
+      "km": 3.631
+    },
+    "pseudo": {
+      "n": 1183,
+      "km": 1.092
+    },
+    "sidewalk": {
+      "n": 2722,
+      "km": 32.121,
+      "avg_width_m": 2.41,
+      "min_width_m": 0.16
+    }
+  },
+  "nodes": {
+    "junction": 786,
+    "type_change": 3064,
+    "endpoint": 1218
+  },
+  "unattached_crosswalk_ends": 84,
+  "polygons": {
+    "crosswalk": 612,
+    "midblock": 769,
+    "sidewalk": 1420
+  },
+  "files": [
+    "network_mask.tif",
+    "links.geojson",
+    "links_wgs84.geojson",
+    "nodes.geojson",
+    "nodes_wgs84.geojson",
+    "network_polygons.geojson",
+    "network_polygons_wgs84.geojson",
+    "network_stats.json"
+  ]
+}

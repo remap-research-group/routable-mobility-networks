@@ -39,7 +39,7 @@
       },
       "mean_network_confidence": 0.0347,
       "network_pixels_at_0.5": 107040,
-      "seconds": 27.7
+      "seconds": 24.5
     },
     {
       "image": "19TCG285980_r00_c01.tif",
@@ -59,7 +59,7 @@
       },
       "mean_network_confidence": 0.0487,
       "network_pixels_at_0.5": 156651,
-      "seconds": 12.5
+      "seconds": 9.1
     },
     {
       "image": "19TCG285980_r00_c02.tif",
@@ -79,7 +79,7 @@
       },
       "mean_network_confidence": 0.0607,
       "network_pixels_at_0.5": 204783,
-      "seconds": 10.7
+      "seconds": 15.2
     },
     {
       "image": "19TCG285980_r00_c03.tif",
@@ -99,7 +99,7 @@
       },
       "mean_network_confidence": 0.072,
       "network_pixels_at_0.5": 232705,
-      "seconds": 19.1
+      "seconds": 15.0
     },
     {
       "image": "19TCG285980_r00_c04.tif",
@@ -119,7 +119,7 @@
       },
       "mean_network_confidence": 0.0271,
       "network_pixels_at_0.5": 81342,
-      "seconds": 6.6
+      "seconds": 15.2
     },
     {
       "image": "19TCG285980_r00_c05.tif",
@@ -139,7 +139,7 @@
       },
       "mean_network_confidence": 0.0219,
       "network_pixels_at_0.5": 58592,
-      "seconds": 7.4
+      "seconds": 14.3
     },
     {
       "image": "19TCG285980_r00_c06.tif",
@@ -159,7 +159,7 @@
       },
       "mean_network_confidence": 0.032,
       "network_pixels_at_0.5": 85457,
-      "seconds": 6.5
+      "seconds": 17.1
     },
     {
       "image": "19TCG285980_r00_c07.tif",
@@ -179,7 +179,7 @@
       },
       "mean_network_confidence": 0.0654,
       "network_pixels_at_0.5": 201029,
-      "seconds": 14.5
+      "seconds": 9.8
     },
     {
       "image": "19TCG285980_r00_c08.tif",
@@ -199,7 +199,7 @@
       },
       "mean_network_confidence": 0.063,
       "network_pixels_at_0.5": 191516,
-      "seconds": 14.9
+      "seconds": 10.5
     },
     {
       "image": "19TCG285980_r00_c09.tif",
@@ -219,7 +219,7 @@
       },
       "mean_network_confidence": 0.0717,
       "network_pixels_at_0.5": 221822,
-      "seconds": 12.0
+      "seconds": 18.5
     },
     {
       "image": "19TCG285980_r01_c00.tif",
@@ -239,7 +239,7 @@
       },
       "mean_network_confidence": 0.0112,
       "network_pixels_at_0.5": 27273,
-      "seconds": 20.9
+      "seconds": 10.9
     },
     {
       "image": "19TCG285980_r01_c01.tif",
@@ -259,7 +259,7 @@
       },
       "mean_network_confidence": 0.072,
       "network_pixels_at_0.5": 238071,
-      "seconds": 18.8
+      "seconds": 10.2
     },
     {
       "image": "19TCG285980_r01_c02.tif",
@@ -279,7 +279,7 @@
       },
       "mean_network_confidence": 0.1015,
       "network_pixels_at_0.5": 343965,
-      "seconds": 21.3
+      "seconds": 3.5
     },
     {
       "image": "19TCG285980_r01_c03.tif",
@@ -299,7 +299,7 @@
       },
       "mean_network_confidence": 0.0893,
       "network_pixels_at_0.5": 296314,
-      "seconds": 32.8
+      "seconds": 14.4
     },
     {
       "image": "19TCG285980_r01_c04.tif",
@@ -319,7 +319,7 @@
       },
       "mean_network_confidence": 0.0907,
       "network_pixels_at_0.5": 300188,
-      "seconds": 23.5
+      "seconds": 12.6
     },
     {
       "image": "19TCG285980_r01_c05.tif",
@@ -339,7 +339,7 @@
       },
       "mean_network_confidence": 0.073,
       "network_pixels_at_0.5": 228755,
-      "seconds": 14.6
+      "seconds": 6.8
     },
     {
       "image": "19TCG285980_r01_c06.tif",
@@ -359,7 +359,7 @@
       },
       "mean_network_confidence": 0.0773,
       "network_pixels_at_0.5": 241348,
-      "seconds": 12.5
+      "seconds": 22.3
     },
     {
       "image": "19TCG285980_r01_c07.tif",
@@ -379,7 +379,7 @@
       },
       "mean_network_confidence": 0.0743,
       "network_pixels_at_0.5": 235918,
-      "seconds": 9.2
+      "seconds": 19.8
     },
     {
       "image": "19TCG285980_r01_c08.tif",
@@ -399,7 +399,7 @@
       },
       "mean_network_confidence": 0.0599,
       "network_pixels_at_0.5": 187649,
-      "seconds": 10.3
+      "seconds": 6.5
     },
     {
       "image": "19TCG285980_r01_c09.tif",
@@ -419,7 +419,7 @@
       },
       "mean_network_confidence": 0.0565,
       "network_pixels_at_0.5": 174897,
-      "seconds": 15.4
+      "seconds": 8.7
     },
     {
       "image": "19TCG285980_r02_c00.tif",
@@ -439,7 +439,7 @@
       },
       "mean_network_confidence": 0.0824,
       "network_pixels_at_0.5": 278077,
-      "seconds": 17.8
+      "seconds": 18.2
     },
     {
       "image": "19TCG285980_r02_c01.tif",
@@ -459,7 +459,7 @@
       },
       "mean_network_confidence": 0.0391,
       "network_pixels_at_0.5": 126674,
-      "seconds": 11.6
+      "seconds": 17.6
     },
     {
       "image": "19TCG285980_r02_c02.tif",
@@ -479,7 +479,7 @@
       },
       "mean_network_confidence": 0.0543,
       "network_pixels_at_0.5": 172395,
-      "seconds": 17.1
+      "seconds": 5.7
     },
     {
       "image": "19TCG285980_r02_c03.tif",
@@ -499,7 +499,7 @@
       },
       "mean_network_confidence": 0.0472,
       "network_pixels_at_0.5": 156834,
-      "seconds": 16.6
+      "seconds": 7.3
     },
     {
       "image": "19TCG285980_r02_c04.tif",
@@ -519,7 +519,7 @@
       },
       "mean_network_confidence": 0.0398,
       "network_pixels_at_0.5": 124621,
-      "seconds": 13.1
+      "seconds": 16.7
     },
     {
       "image": "19TCG285980_r02_c05.tif",
@@ -539,7 +539,7 @@
       },
       "mean_network_confidence": 0.0781,
       "network_pixels_at_0.5": 252524,
-      "seconds": 12.4
+      "seconds": 12.7
     },
     {
       "image": "19TCG285980_r02_c06.tif",
@@ -559,7 +559,7 @@
       },
       "mean_network_confidence": 0.0613,
       "network_pixels_at_0.5": 192206,
-      "seconds": 10.0
+      "seconds": 20.6
     },
     {
       "image": "19TCG285980_r02_c07.tif",
@@ -579,7 +579,7 @@
       },
       "mean_network_confidence": 0.0643,
       "network_pixels_at_0.5": 200116,
-      "seconds": 12.3
+      "seconds": 14.9
     },
     {
       "image": "19TCG285980_r02_c08.tif",
@@ -599,7 +599,7 @@
       },
       "mean_network_confidence": 0.0881,
       "network_pixels_at_0.5": 275378,
-      "seconds": 3.2
+      "seconds": 8.1
     },
     {
       "image": "19TCG285980_r02_c09.tif",
@@ -619,7 +619,7 @@
       },
       "mean_network_confidence": 0.1341,
       "network_pixels_at_0.5": 443172,
-      "seconds": 10.0
+      "seconds": 5.9
     },
     {
       "image": "19TCG285980_r03_c00.tif",
@@ -639,7 +639,7 @@
       },
       "mean_network_confidence": 0.0417,
       "network_pixels_at_0.5": 132098,
-      "seconds": 6.4
+      "seconds": 5.0
     },
     {
       "image": "19TCG285980_r03_c01.tif",
@@ -659,7 +659,7 @@
       },
       "mean_network_confidence": 0.0269,
       "network_pixels_at_0.5": 83823,
-      "seconds": 5.7
+      "seconds": 14.1
     },
     {
       "image": "19TCG285980_r03_c02.tif",
@@ -679,7 +679,7 @@
       },
       "mean_network_confidence": 0.0524,
       "network_pixels_at_0.5": 166294,
-      "seconds": 8.4
+      "seconds": 7.9
     },
     {
       "image": "19TCG285980_r03_c03.tif",
@@ -699,7 +699,7 @@
       },
       "mean_network_confidence": 0.0285,
       "network_pixels_at_0.5": 87523,
-      "seconds": 4.9
+      "seconds": 6.5
     },
     {
       "image": "19TCG285980_r03_c04.tif",
@@ -719,7 +719,7 @@
       },
       "mean_network_confidence": 0.0297,
       "network_pixels_at_0.5": 84353,
-      "seconds": 4.0
+      "seconds": 14.8
     },
     {
       "image": "19TCG285980_r03_c05.tif",
@@ -739,7 +739,7 @@
       },
       "mean_network_confidence": 0.0289,
       "network_pixels_at_0.5": 86655,
-      "seconds": 3.4
+      "seconds": 15.9
     },
     {
       "image": "19TCG285980_r03_c06.tif",
@@ -759,7 +759,7 @@
       },
       "mean_network_confidence": 0.0049,
       "network_pixels_at_0.5": 5400,
-      "seconds": 3.2
+      "seconds": 9.0
     },
     {
       "image": "19TCG285980_r03_c07.tif",
@@ -799,7 +799,7 @@
       },
       "mean_network_confidence": 0.0437,
       "network_pixels_at_0.5": 131984,
-      "seconds": 7.7
+      "seconds": 12.8
     },
     {
       "image": "19TCG285980_r03_c09.tif",
@@ -819,7 +819,7 @@
       },
       "mean_network_confidence": 0.0633,
       "network_pixels_at_0.5": 203543,
-      "seconds": 14.0
+      "seconds": 13.8
     },
     {
       "image": "19TCG285980_r04_c00.tif",
@@ -839,7 +839,7 @@
       },
       "mean_network_confidence": 0.0688,
       "network_pixels_at_0.5": 233838,
-      "seconds": 8.2
+      "seconds": 9.9
     },
     {
       "image": "19TCG285980_r04_c01.tif",
@@ -859,7 +859,7 @@
       },
       "mean_network_confidence": 0.0744,
       "network_pixels_at_0.5": 250280,
-      "seconds": 13.5
+      "seconds": 6.0
     },
     {
       "image": "19TCG285980_r04_c02.tif",
@@ -879,7 +879,7 @@
       },
       "mean_network_confidence": 0.0835,
       "network_pixels_at_0.5": 280639,
-      "seconds": 13.4
+      "seconds": 6.1
     },
     {
       "image": "19TCG285980_r04_c03.tif",
@@ -899,7 +899,7 @@
       },
       "mean_network_confidence": 0.0425,
       "network_pixels_at_0.5": 138883,
-      "seconds": 19.0
+      "seconds": 2.8
     },
     {
       "image": "19TCG285980_r04_c04.tif",
@@ -919,7 +919,7 @@
       },
       "mean_network_confidence": 0.0375,
       "network_pixels_at_0.5": 114388,
-      "seconds": 11.0
+      "seconds": 10.9
     },
     {
       "image": "19TCG285980_r04_c05.tif",
@@ -939,7 +939,7 @@
       },
       "mean_network_confidence": 0.0487,
       "network_pixels_at_0.5": 145168,
-      "seconds": 13.2
+      "seconds": 7.0
     },
     {
       "image": "19TCG285980_r04_c06.tif",
@@ -959,7 +959,7 @@
       },
       "mean_network_confidence": 0.033,
       "network_pixels_at_0.5": 94987,
-      "seconds": 9.0
+      "seconds": 4.7
     },
     {
       "image": "19TCG285980_r04_c07.tif",
@@ -979,7 +979,7 @@
       },
       "mean_network_confidence": 0.0315,
       "network_pixels_at_0.5": 97434,
-      "seconds": 8.4
+      "seconds": 16.0
     },
     {
       "image": "19TCG285980_r04_c08.tif",
@@ -999,7 +999,7 @@
       },
       "mean_network_confidence": 0.0252,
       "network_pixels_at_0.5": 70430,
-      "seconds": 7.0
+      "seconds": 16.6
     },
     {
       "image": "19TCG285980_r04_c09.tif",
@@ -1019,7 +1019,7 @@
       },
       "mean_network_confidence": 0.0619,
       "network_pixels_at_0.5": 196562,
-      "seconds": 6.5
+      "seconds": 8.6
     },
     {
       "image": "19TCG285980_r05_c00.tif",
@@ -1039,7 +1039,7 @@
       },
       "mean_network_confidence": 0.0628,
       "network_pixels_at_0.5": 213836,
-      "seconds": 16.0
+      "seconds": 5.2
     },
     {
       "image": "19TCG285980_r05_c01.tif",
@@ -1059,7 +1059,7 @@
       },
       "mean_network_confidence": 0.0837,
       "network_pixels_at_0.5": 287477,
-      "seconds": 15.9
+      "seconds": 5.5
     },
     {
       "image": "19TCG285980_r05_c02.tif",
@@ -1079,7 +1079,7 @@
       },
       "mean_network_confidence": 0.0931,
       "network_pixels_at_0.5": 318820,
-      "seconds": 13.1
+      "seconds": 24.2
     },
     {
       "image": "19TCG285980_r05_c03.tif",
@@ -1099,7 +1099,7 @@
       },
       "mean_network_confidence": 0.0627,
       "network_pixels_at_0.5": 215010,
-      "seconds": 9.4
+      "seconds": 8.7
     },
     {
       "image": "19TCG285980_r05_c04.tif",
@@ -1119,7 +1119,7 @@
       },
       "mean_network_confidence": 0.0255,
       "network_pixels_at_0.5": 72540,
-      "seconds": 9.1
+      "seconds": 9.6
     },
     {
       "image": "19TCG285980_r05_c05.tif",
@@ -1139,7 +1139,7 @@
       },
       "mean_network_confidence": 0.0205,
       "network_pixels_at_0.5": 56288,
-      "seconds": 5.6
+      "seconds": 13.9
     },
     {
       "image": "19TCG285980_r05_c06.tif",
@@ -1159,7 +1159,7 @@
       },
       "mean_network_confidence": 0.0126,
       "network_pixels_at_0.5": 33532,
-      "seconds": 11.4
+      "seconds": 18.5
     },
     {
       "image": "19TCG285980_r05_c07.tif",
@@ -1179,7 +1179,7 @@
       },
       "mean_network_confidence": 0.0093,
       "network_pixels_at_0.5": 15907,
-      "seconds": 20.6
+      "seconds": 12.5
     },
     {
       "image": "19TCG285980_r05_c08.tif",
@@ -1199,7 +1199,7 @@
       },
       "mean_network_confidence": 0.0347,
       "network_pixels_at_0.5": 105487,
-      "seconds": 16.1
+      "seconds": 22.1
     },
     {
       "image": "19TCG285980_r05_c09.tif",
@@ -1219,7 +1219,7 @@
       },
       "mean_network_confidence": 0.0477,
       "network_pixels_at_0.5": 153105,
-      "seconds": 12.3
+      "seconds": 22.2
     },
     {
       "image": "19TCG285980_r06_c00.tif",
@@ -1239,7 +1239,7 @@
       },
       "mean_network_confidence": 0.0574,
       "network_pixels_at_0.5": 187395,
-      "seconds": 13.4
+      "seconds": 9.2
     },
     {
       "image": "19TCG285980_r06_c01.tif",
@@ -1259,7 +1259,7 @@
       },
       "mean_network_confidence": 0.0587,
       "network_pixels_at_0.5": 198324,
-      "seconds": 14.0
+      "seconds": 7.7
     },
     {
       "image": "19TCG285980_r06_c02.tif",
@@ -1279,7 +1279,7 @@
       },
       "mean_network_confidence": 0.0609,
       "network_pixels_at_0.5": 195765,
-      "seconds": 6.8
+      "seconds": 38.4
     },
     {
       "image": "19TCG285980_r06_c03.tif",
@@ -1299,7 +1299,7 @@
       },
       "mean_network_confidence": 0.0585,
       "network_pixels_at_0.5": 195682,
-      "seconds": 6.8
+      "seconds": 22.0
     },
     {
       "image": "19TCG285980_r06_c04.tif",
@@ -1319,7 +1319,7 @@
       },
       "mean_network_confidence": 0.0191,
       "network_pixels_at_0.5": 51988,
-      "seconds": 11.4
+      "seconds": 14.9
     },
     {
       "image": "19TCG285980_r06_c05.tif",
@@ -1339,7 +1339,7 @@
       },
       "mean_network_confidence": 0.0275,
       "network_pixels_at_0.5": 79459,
-      "seconds": 13.0
+      "seconds": 8.9
     },
     {
       "image": "19TCG285980_r06_c06.tif",
@@ -1359,7 +1359,7 @@
       },
       "mean_network_confidence": 0.021,
       "network_pixels_at_0.5": 56815,
-      "seconds": 8.9
+      "seconds": 11.4
     },
     {
       "image": "19TCG285980_r06_c07.tif",
@@ -1379,7 +1379,7 @@
       },
       "mean_network_confidence": 0.0257,
       "network_pixels_at_0.5": 71041,
-      "seconds": 6.4
+      "seconds": 7.0
     },
     {
       "image": "19TCG285980_r06_c08.tif",
@@ -1399,7 +1399,7 @@
       },
       "mean_network_confidence": 0.0379,
       "network_pixels_at_0.5": 115646,
-      "seconds": 4.5
+      "seconds": 9.9
     },
     {
       "image": "19TCG285980_r06_c09.tif",
@@ -1419,7 +1419,7 @@
       },
       "mean_network_confidence": 0.0972,
       "network_pixels_at_0.5": 329399,
-      "seconds": 4.3
+      "seconds": 10.2
     },
     {
       "image": "19TCG285980_r07_c00.tif",
@@ -1439,7 +1439,7 @@
       },
       "mean_network_confidence": 0.0424,
       "network_pixels_at_0.5": 139270,
-      "seconds": 15.9
+      "seconds": 7.0
     },
     {
       "image": "19TCG285980_r07_c01.tif",
@@ -1459,7 +1459,7 @@
       },
       "mean_network_confidence": 0.0505,
       "network_pixels_at_0.5": 169070,
-      "seconds": 19.3
+      "seconds": 8.6
     },
     {
       "image": "19TCG285980_r07_c02.tif",
@@ -1479,7 +1479,7 @@
       },
       "mean_network_confidence": 0.0464,
       "network_pixels_at_0.5": 150664,
-      "seconds": 11.3
+      "seconds": 18.0
     },
     {
       "image": "19TCG285980_r07_c03.tif",
@@ -1499,7 +1499,7 @@
       },
       "mean_network_confidence": 0.0472,
       "network_pixels_at_0.5": 155091,
-      "seconds": 14.5
+      "seconds": 20.0
     },
     {
       "image": "19TCG285980_r07_c04.tif",
@@ -1519,7 +1519,7 @@
       },
       "mean_network_confidence": 0.0192,
       "network_pixels_at_0.5": 57427,
-      "seconds": 20.4
+      "seconds": 9.9
     },
     {
       "image": "19TCG285980_r07_c05.tif",
@@ -1539,7 +1539,7 @@
       },
       "mean_network_confidence": 0.0037,
       "network_pixels_at_0.5": 1077,
-      "seconds": 11.6
+      "seconds": 7.1
     },
     {
       "image": "19TCG285980_r07_c06.tif",
@@ -1559,7 +1559,7 @@
       },
       "mean_network_confidence": 0.0235,
       "network_pixels_at_0.5": 67982,
-      "seconds": 9.7
+      "seconds": 5.0
     },
     {
       "image": "19TCG285980_r07_c07.tif",
@@ -1579,7 +1579,7 @@
       },
       "mean_network_confidence": 0.0192,
       "network_pixels_at_0.5": 46944,
-      "seconds": 15.5
+      "seconds": 3.8
     },
     {
       "image": "19TCG285980_r07_c08.tif",
@@ -1599,7 +1599,7 @@
       },
       "mean_network_confidence": 0.0516,
       "network_pixels_at_0.5": 168292,
-      "seconds": 11.6
+      "seconds": 12.7
     },
     {
       "image": "19TCG285980_r07_c09.tif",
@@ -1619,7 +1619,7 @@
       },
       "mean_network_confidence": 0.0148,
       "network_pixels_at_0.5": 38954,
-      "seconds": 26.1
+      "seconds": 11.8
     },
     {
       "image": "19TCG285980_r08_c00.tif",
@@ -1639,7 +1639,7 @@
       },
       "mean_network_confidence": 0.0616,
       "network_pixels_at_0.5": 204820,
-      "seconds": 14.2
+      "seconds": 13.4
     },
     {
       "image": "19TCG285980_r08_c01.tif",
@@ -1659,7 +1659,7 @@
       },
       "mean_network_confidence": 0.0473,
       "network_pixels_at_0.5": 158622,
-      "seconds": 10.1
+      "seconds": 16.4
     },
     {
       "image": "19TCG285980_r08_c02.tif",
@@ -1679,7 +1679,7 @@
       },
       "mean_network_confidence": 0.0514,
       "network_pixels_at_0.5": 167135,
-      "seconds": 2.6
+      "seconds": 6.9
     },
     {
       "image": "19TCG285980_r08_c03.tif",
@@ -1699,7 +1699,7 @@
       },
       "mean_network_confidence": 0.0481,
       "network_pixels_at_0.5": 157902,
-      "seconds": 3.2
+      "seconds": 5.5
     },
     {
       "image": "19TCG285980_r08_c04.tif",
@@ -1719,7 +1719,7 @@
       },
       "mean_network_confidence": 0.0436,
       "network_pixels_at_0.5": 135324,
-      "seconds": 14.6
+      "seconds": 14.0
     },
     {
       "image": "19TCG285980_r08_c05.tif",
@@ -1739,7 +1739,7 @@
       },
       "mean_network_confidence": 0.0265,
       "network_pixels_at_0.5": 80886,
-      "seconds": 16.6
+      "seconds": 11.1
     },
     {
       "image": "19TCG285980_r08_c06.tif",
@@ -1759,7 +1759,7 @@
       },
       "mean_network_confidence": 0.0455,
       "network_pixels_at_0.5": 136701,
-      "seconds": 4.8
+      "seconds": 12.1
     },
     {
       "image": "19TCG285980_r08_c07.tif",
@@ -1779,7 +1779,7 @@
       },
       "mean_network_confidence": 0.0367,
       "network_pixels_at_0.5": 108219,
-      "seconds": 7.9
+      "seconds": 11.0
     },
     {
       "image": "19TCG285980_r08_c08.tif",
@@ -1799,7 +1799,7 @@
       },
       "mean_network_confidence": 0.0576,
       "network_pixels_at_0.5": 180966,
-      "seconds": 5.3
+      "seconds": 6.3
     },
     {
       "image": "19TCG285980_r08_c09.tif",
@@ -1819,7 +1819,7 @@
       },
       "mean_network_confidence": 0.0586,
       "network_pixels_at_0.5": 194553,
-      "seconds": 8.0
+      "seconds": 10.5
     },
     {
       "image": "19TCG285980_r09_c00.tif",
@@ -1839,7 +1839,7 @@
       },
       "mean_network_confidence": 0.0228,
       "network_pixels_at_0.5": 67124,
-      "seconds": 8.1
+      "seconds": 8.2
     },
     {
       "image": "19TCG285980_r09_c01.tif",
@@ -1859,7 +1859,7 @@
       },
       "mean_network_confidence": 0.0386,
       "network_pixels_at_0.5": 126190,
-      "seconds": 12.9
+      "seconds": 8.1
     },
     {
       "image": "19TCG285980_r09_c02.tif",
@@ -1879,7 +1879,7 @@
       },
       "mean_network_confidence": 0.0543,
       "network_pixels_at_0.5": 179674,
-      "seconds": 17.7
+      "seconds": 12.0
     },
     {
       "image": "19TCG285980_r09_c03.tif",
@@ -1899,7 +1899,7 @@
       },
       "mean_network_confidence": 0.0386,
       "network_pixels_at_0.5": 119943,
-      "seconds": 14.4
+      "seconds": 4.5
     },
     {
       "image": "19TCG285980_r09_c04.tif",
@@ -1919,7 +1919,7 @@
       },
       "mean_network_confidence": 0.0256,
       "network_pixels_at_0.5": 74742,
-      "seconds": 9.3
+      "seconds": 3.8
     },
     {
       "image": "19TCG285980_r09_c05.tif",
@@ -1939,7 +1939,7 @@
       },
       "mean_network_confidence": 0.009,
       "network_pixels_at_0.5": 20799,
-      "seconds": 6.5
+      "seconds": 5.4
     },
     {
       "image": "19TCG285980_r09_c06.tif",
@@ -1959,7 +1959,7 @@
       },
       "mean_network_confidence": 0.006,
       "network_pixels_at_0.5": 8921,
-      "seconds": 15.8
+      "seconds": 5.7
     },
     {
       "image": "19TCG285980_r09_c07.tif",
@@ -1979,7 +1979,7 @@
       },
       "mean_network_confidence": 0.039,
       "network_pixels_at_0.5": 122458,
-      "seconds": 7.5
+      "seconds": 3.9
     },
     {
       "image": "19TCG285980_r09_c08.tif",
@@ -1999,7 +1999,7 @@
       },
       "mean_network_confidence": 0.0681,
       "network_pixels_at_0.5": 219189,
-      "seconds": 9.4
+      "seconds": 5.4
     },
     {
       "image": "19TCG285980_r09_c09.tif",
@@ -2019,7 +2019,7 @@
       },
       "mean_network_confidence": 0.0516,
       "network_pixels_at_0.5": 171414,
-      "seconds": 6.4
+      "seconds": 3.4
     }
   ]
 }
