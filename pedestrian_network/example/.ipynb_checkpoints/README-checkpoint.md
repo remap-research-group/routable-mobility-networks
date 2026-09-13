@@ -10,7 +10,9 @@ every kind of input it accepts:
 | `mass_2025` | one MassDOT JPEG2000 ortho tile, 4-band, 0.15 m/px, 1.5 × 1.5 km | inspection → prepare (resample + tile) → two-stage run on out-of-domain imagery |
 
 All commands below assume the environment from `run/README.md` is active and
-you are in the `run/` folder.
+you are in the `run/` folder. Our results are shipped in `output/provided/<name>/`
+(for `mass_2025` without the regenerable `prepared/` tiles); the commands write
+your own run to `output/<name>/`, so the two can be compared side by side.
 
 <br>
 
@@ -130,7 +132,7 @@ RTX A6000, stage 1 takes ≈ 15 min and stage 2 ≈ 13 min (one CPU core).
 The same layout as the DC examples. Expect softer, patchier predictions: the
 imagery is upsampled from 0.15 m/px and the model was trained on Washington,
 DC only. With default parameters the run yields 5,199 links, 5,068 nodes and
-2,801 polygons over the 1.5 km square (`network/network_stats.json`).
+2,801 polygons over the 1.5 km square (`output/provided/mass_2025/network/network_stats.json`).
 
 <p align="center"><img src="../misc/example_mass_rasters.png" alt="MassDOT imagery, network confidence, network mask and network" width="92%"></p>
 

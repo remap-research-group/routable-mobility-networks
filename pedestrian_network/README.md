@@ -42,7 +42,7 @@
 
 * Python ≥ 3.10
 * PyTorch ≥ 2.0 with a CUDA build matching your driver
-* Key dependencies (installed automatically): `timm`, `albumentations`, `rasterio`, `scipy`, `scikit-image`, `numpy`, `Pillow`
+* Key dependencies (installed by `requirements.txt`): `timm`, `rasterio`, `shapely`, `scipy`, `scikit-image`, `numpy`, `Pillow` (+ `albumentations` for training)
 
 **Input imagery**
 
@@ -114,7 +114,10 @@ python run/stage_2/build_network.py --input example/output/mass_2025
 
 Every run starts by printing an inspection report of each input (format,
 size, bands, CRS, resolution, coverage, tiling advice) and a report of the
-loaded model. Stage 1 writes the per-pixel products, stage 2 the network:
+loaded model. Stage 1 writes the per-pixel products, stage 2 the network.
+Our own results for all three examples are shipped in `example/output/provided/`,
+so your run goes into a fresh `example/output/<name>/` that you can compare
+against them:
 
 ```
 example/output/dc_2023/

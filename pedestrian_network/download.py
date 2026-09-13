@@ -26,6 +26,7 @@ import json
 import hashlib
 import argparse
 import zipfile
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -49,7 +50,18 @@ def fetch(url, dest):
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_suffix(dest.suffix + '.part')
     req = urllib.request.Request(url, headers={'User-Agent': 'pednet-download'})
-    with urllib.request.urlopen(req) as r, open(tmp, 'wb') as f:
+    try:
+        r = urllib.request.urlopen(req)
+    except urllib.error.HTTPError as e:
+        raise SystemExit(
+            f'\nERROR: {url} -> HTTP {e.code}.\n'
+            f'  The release asset was not found. Check that the release tag exists (--tag), that the\n'
+            f'  repository is public (or you are logged in to GitHub), and that the asset is named {dest.name}.\n'
+            f'  Manual alternative: download {dest.name} from\n'
+            f'  https://github.com/{REPO}/releases and put it at {dest}') from None
+    except urllib.error.URLError as e:
+        raise SystemExit(f'\nERROR: cannot reach {url}: {e.reason}') from None
+    with r, open(tmp, 'wb') as f:
         total = int(r.headers.get('Content-Length') or 0)
         done = 0
         while True:
