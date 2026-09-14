@@ -1,0 +1,12 @@
+# download_MassGIS2025AerialImagery — Python ≥ 3.10
+#   pip install -r requirements.txt
+# fetch.py also needs the GDAL command-line tools on PATH (gdalbuildvrt, and
+# gdal_translate for --build-tif): apt install gdal-bin / conda install gdal / brew install gdal.
+geopandas
+pygris                     # town polygons (--city/--state mode)
+shapely>=2.0
+requests
+rasterio>=1.3              # PyPI wheels bundle GDAL with the JPEG2000 driver
+numpy>=1.24
+opencv-python-headless
+tqdm
