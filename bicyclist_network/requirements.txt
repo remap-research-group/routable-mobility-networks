@@ -1,0 +1,37 @@
+# Runtime + training dependencies (Python ≥ 3.10).
+#
+# Install PyTorch FIRST, together with torchvision, from the index that matches
+# your CUDA driver (https://pytorch.org/get-started/locally/), e.g.
+#     pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+# then, from bicyclist_network/:
+#     pip install -r requirements.txt
+#     pip install -e .            # registers the `bikelane` command (run/bikelane_extract)
+# torch/torchvision are deliberately not listed here: pip would otherwise pull
+# the newest CUDA build from PyPI, which may not match your driver.
+#
+# The same list, grouped by stage, is in pyproject.toml (`pip install -e ".[all]"`
+# is equivalent to the two lines above). The imagery download tool has its own
+# requirements: ../download_MassGIS2025AerialImagery/requirements.txt
+
+# core (stages 2, 4, 5: centerlines, join, gaps)
+numpy>=1.24
+scipy
+shapely>=2.0
+networkx
+pyyaml
+tqdm
+Pillow
+opencv-python-headless
+scikit-image
+
+# stage 1 predict + train/seg
+segmentation-models-pytorch
+huggingface_hub               # train/seg/1_prepare.py: OpenSatMap download
+
+# stage 3 signs + train/yolo
+ultralytics
+
+# osm (junction nodes for gaps intersections) + CRS fallback
+osmnx>=1.9
+geopandas
+pygris

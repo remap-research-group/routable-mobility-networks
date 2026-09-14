@@ -1,0 +1,19 @@
+# bikelane-extract — project file. Edit this, then run the stages with no arguments:
+#
+#     bikelane predict            bikelane centerlines all
+#     bikelane signs detect / filter         bikelane join match / clean
+#     bikelane osm                bikelane gaps scan / join / intersections / network
+#
+# Tiles come from download_MassGIS2025AerialImagery (run it for the same area first);
+# weights from `python download.py` (→ run/src/).
+
+# Give EITHER city+state (one town) OR boundary+name (any polygon file).
+
+# city: Boston
+# state: MA
+
+boundary: /cura/ssynn3/RMN/01_TargetingArea/Boundaries.geojson
+name: boston_mpo
+data_root: /cura/ssynn3/RMN/bikelane-extract/data
+# imagery_root: /cura/ssynn3/RMN/download_MassGIS2025AerialImagery/output   # default: ../download_MassGIS2025AerialImagery/output
+# crs: EPSG:32619              # default: from imagery_info.json, else the area's UTM zone

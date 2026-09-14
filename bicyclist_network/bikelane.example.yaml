@@ -1,0 +1,36 @@
+# bikelane-extract — project file.  Copy to bikelane.yaml, set the area, then run the stages:
+#     bikelane predict            bikelane centerlines all
+#     bikelane signs detect / filter         bikelane join match / clean
+#     bikelane osm                bikelane gaps scan / join / intersections / network
+#
+# Every command looks for this file in the current directory (or pass -c path/to/file).
+# Give EITHER city+state (one town) OR boundary+name (any polygon file) — the SAME
+# area you gave download_MassGIS2025AerialImagery, so the REGION tag matches
+# (`Fall River` → FALL_RIVER; `name: boston_mpo` → BOSTON_MPO).
+
+city: Boston
+state: MA
+# boundary: /path/to/Boundaries.geojson
+# name: boston_mpo
+
+# data_root: ./data            # where every stage writes (default ./data, created on first use)
+# imagery_root: ../download_MassGIS2025AerialImagery/output
+#                              # where the tiles are read from: <imagery_root>/<REGION>/tiles,
+#                              # <imagery_root>/<REGION>/Tile_Mappings.csv. Default: the sibling
+#                              # download tool's output/ folder. Relative paths are relative to this file.
+# crs: EPSG:32619              # default: from <imagery_root>/<REGION>/imagery_info.json, else the UTM zone
+
+# ── Optional: use tiles that already exist somewhere else (any imagery, not only MassGIS)
+# paths:
+#   tiles_dir:         /existing/Aerial_Images/BOSTON/BOSTON_Tiled
+#   tile_mappings_csv: /existing/Aerial_Images/BOSTON/Tile_Mappings.csv
+#   predictions_dir:   /existing/predictions/BOSTON
+#   weights_dir:       /shared/weights          # default run/src/
+
+# ── Optional: parameter overrides. Any key from run/bikelane_extract/default.yaml.
+# join:
+#   radius_m: 1.5
+# centerlines:
+#   chunk_tiles: 4               # laptop (~1.5 GB RAM instead of ~3 GB)
+# predict: {batch: 4}
+# signs:   {batch: 4}

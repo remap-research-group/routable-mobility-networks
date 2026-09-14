@@ -1,0 +1,8 @@
+# example project file — Lexington, MA. From bicyclist_network/:
+#     bikelane predict -c example/lexington.yaml       (and so on for every stage)
+# or  bash run/run_all.sh                              after `cp example/lexington.yaml bikelane.yaml`
+# Reads tiles from example/input/LEXINGTON/, writes to example/output/ (both relative to this file).
+city: Lexington
+state: MA
+imagery_root: input
+data_root: output

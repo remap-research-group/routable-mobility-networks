@@ -1,0 +1,147 @@
+# bikelane-extract — default parameters. This is the only configuration file.
+#
+# Every value here was fixed on OpenSatMap / MassDOT 15 cm imagery (Lexington, MA,
+# Sept 2026) and is used as-is for any area. Override in ./bikelane.yaml, or
+# for one run:                        --set join.radius_m=1.5
+# The groups marked (region-sensitive) may be worth re-checking with the --sweep
+# commands in a very different setting (dense downtown, other imagery); run/README.md.
+#
+# Input tiles are NOT made here: download_MassGIS2025AerialImagery/ (a sibling
+# folder) downloads MassGIS 2025 orthophotos and cuts them into 1024 px tiles at
+# 0.15 m/px with 25 % overlap. resolution_m / tile_px below must match what that
+# tool produced (it records them in <imagery_root>/<REGION>/imagery_info.json).
+
+resolution_m: 0.15         # orthophoto ground sampling distance (m/px)
+tile_px: 1024
+towns_year: 2025           # pygris county_subdivisions year, only for the CRS fallback (city/state mode)
+weights:                   # bare filename → run/src/ (python download.py); or an absolute path
+  seg:  seg_unet_r34.pt
+  yolo: yolo26m_bikesign.pt
+
+# ══ train/ ═════════════════════════════════════════════════════════════════════
+# The sections prepare / train / yolo are read by the scripts in train/. The run
+# stages only read train.encoder and train.num_classes (to rebuild the seg model).
+
+# ── train/seg 1_prepare.py (OpenSatMap level-20, 0.15 m/px)
+prepare:
+  hf_repo: z-hb/OpenSatMap                                  # Hugging Face dataset (CC BY-NC-SA 4.0)
+  tools_repo: https://github.com/OpenSatMap/OpenSatMap-offical
+  zip_prefix: 20picstrainvaltest
+  anno_json: annotrainval20.json
+  image_size: 4096
+  zoom: 20
+  clip_size: 1024
+
+# ── train/seg 2_train.py (also: predict rebuilds the model from encoder / num_classes)
+train:
+  encoder: resnet34
+  num_classes: 4           # 0 bg, 1 lane line, 2 curb, 3 virtual line (255 ignore)
+  dilate_px: 3
+  batch: 8
+  epochs: 30
+  bg_weight: 0.1
+  lr: 3.0e-4
+  weight_decay: 1.0e-4
+  num_workers: 8
+
+# ── train/yolo 2_train.py — bike pavement-symbol detector
+yolo:
+  base_model: yolo26m.pt   # ultralytics checkpoint to fine-tune (downloaded by ultralytics on first use)
+  classes: [BikeOnly, Sharrow, OnlyBikeBus]   # class ids 0/1/2 — must stay in this order (facility.py)
+  imgsz: 1024
+  epochs: 100
+  batch: 8
+  patience: 30
+  val_frac: 0.15           # 1_prepare_dataset.py: share of tiles held out for validation
+  seed: 42
+
+# ══ run/ ═══════════════════════════════════════════════════════════════════════
+
+# ── stage 1: predict
+predict:
+  batch: 16
+
+# ── stage 2: centerlines
+centerlines:
+  chunk_tiles: 6           # tiles per chunk side (6 → 4864² canvas, ~3 GB peak per worker)
+  workers: null            # parallel chunk processes; null = min(cpu, 8). Set by RAM: ~3 GB each
+  overlap_tiles: 1
+  use_curb: true
+  voronoi:                 # 06 v8 (pixels unless noted); see notebooks/06_centerline_clean_v8
+    close_k: 5
+    minpix: 8
+    curb_minpix: 25
+    ang_merge: 15.0
+    lat_tol: 7.0
+    gap_max: 130.0
+    multipass: false
+    bin_w: 20.0
+    dmin: 3                # half-width 0.9 m — keeps bike-lane-width centerlines
+    dmax: 20
+    ang_tol: 30.0
+    min_branch: 30
+    tip: 5
+    cap_filter: true
+    border_exempt: true
+  graph:
+    snap_m: 1.5
+    min_len_m: 3.0
+    dedup_cell_m: 2.0
+    min_comp_len_m: 20.0
+  clean:
+    hook_ang: 110.0
+    hook_max_m: 15.0
+    dup_lat_m: 1.0
+    dup_frac: 0.9
+    dup_ang: 20.0
+    min_len_m: 3.0
+    stitch: false          # endpoint-tangent stitching draws chords on curves; abandoned
+
+# ── stage 3: signs
+signs:
+  conf_infer: 0.25         # inference threshold; raw CSV kept so this never re-runs
+  conf_keep:               # (region-sensitive) acceptance threshold per class; 1.01 = drop the class
+    BikeOnly: 0.60         # isolated-share curve bottoms out ~0.55 (signs filter --sweep)
+    Sharrow: 0.60
+    OnlyBikeBus: 1.01      # all Lexington detections were false positives
+  iou: 0.5
+  imgsz: 1024
+  batch: 16
+  neighbor_r_m: 30.0       # isolation flag radius (recorded, not filtered); shrink in dense downtowns
+
+# ── stage 4: join
+join:
+  radius_m: 2.0            # (region-sensitive) symbol centre → all centerlines within R; lines/sign flat to 2.0, jumps at 3.0
+  clean:
+    hook_ang: 110.0
+    hook_max_m: 15.0
+    dup_lat_m: 1.0
+    dup_frac: 0.9
+    dup_ang: 20.0
+    merge_opposite: false  # opposite-direction parallel = two-way facility, keep
+    short_m: 10.0
+    drop_short: false
+
+# ── osm (junction nodes for gaps intersections)
+osm:
+  network_type: drive      # NOT 'bike' — OSM bike tags are held back for validation
+  buffer_m: 200            # around the tile extent
+  junction_min_degree: 3
+
+# ── stage 5: gaps
+gaps:
+  scan:                    # (region-sensitive) confirmed on all 88 Lexington candidates
+    tail_m: 8.0            # direction measured over the last 8 m, not the tangent
+    gap_max_m: 25.0        # candidate growth flattens 25→30 m (gaps scan --sweep)
+    ang: 12.0
+    lat_max_m: 1.0
+    crossing:              # a gap is an intersection if a cross-direction centerline sits in it
+      radius_m: 30.0
+      ang: 30.0
+      min_len_m: 3.0
+  intersections:           # 16 — looser, since crossings enter at an angle
+    tail_m: 8.0
+    gap_max_m: 60.0
+    ang: 35.0
+    lat_max_m: 3.0
+    node_snap_m: 25.0      # use OSM junction node within this distance, else midpoint

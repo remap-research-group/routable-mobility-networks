@@ -1,0 +1,7 @@
+# example project file — Boston, MA. From bicyclist_network/:
+#     bikelane predict -c example/boston.yaml          (and so on for every stage)
+# Reads tiles from example/input/BOSTON/, writes to example/output/ (both relative to this file).
+city: Boston
+state: MA
+imagery_root: input
+data_root: output

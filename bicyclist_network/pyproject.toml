@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+# hatchling: editable installs write nothing into the source tree (a .pth in the venv only),
+# so `pip install -e .` works on CIFS/NFS shares where setuptools' egg-info fails.
+
+[project]
+name = "bikelane-extract"
+version = "0.1.0"
+description = "Lane-level bike-lane extraction from high-resolution orthophotos (MassDOT 15 cm)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "SungHo Synn" }]
+dependencies = [
+    "numpy>=1.24",
+    "scipy",
+    "shapely>=2.0",
+    "networkx",
+    "pyyaml",
+    "tqdm",
+    "pillow",
+    "opencv-python-headless",
+    "scikit-image",
+]
+
+[project.optional-dependencies]
+# stage 1 predict (+ train/seg): segmentation model (install torch separately for your CUDA)
+seg = ["segmentation-models-pytorch", "huggingface_hub"]
+# stage 3 signs (+ train/yolo): YOLO bike-sign detection
+signs = ["ultralytics"]
+# osm junction nodes (for gaps intersections)
+osm = ["osmnx>=1.9", "geopandas"]
+# CRS fallback when imagery_info.json is absent (town lookup / boundary centroid)
+area = ["geopandas", "pygris"]
+# diagnostic notebooks
+notebooks = ["matplotlib", "jupyter"]
+all = ["bikelane-extract[seg,signs,osm,area,notebooks]"]
+# imagery download + tiling is a separate tool: ../download_MassGIS2025AerialImagery/requirements.txt
+
+[project.scripts]
+bikelane = "bikelane_extract.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["run/bikelane_extract"]
+
+[tool.hatch.build.targets.sdist]
+include = ["run/bikelane_extract", "bikelane.example.yaml", "README.md", "pyproject.toml"]
