@@ -53,6 +53,11 @@
 
 ### Installation
 
+**Demo** — installing and running the tool from scratch (5 min):
+https://github.com/user-attachments/assets/a0f188cc-9c1e-4f9d-8f39-c26a35abc5be
+
+<br>
+
 **1. Clone the repository** and enter the pedestrian-network folder:
 
 ```bash
