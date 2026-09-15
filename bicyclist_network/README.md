@@ -167,9 +167,9 @@ one's files and prints what to look at before the next; `--check` validates the
 inputs of a stage without running it. Long stages: run inside `tmux`.
 
 ```bash
-bikelane predict                     # 1  tiles → lane-marking class masks              (GPU)
-bikelane centerlines all             # 2  masks → lane centerlines                      (CPU, long)
-bikelane signs detect                # 3  tiles → bike pavement symbols (raw)           (GPU)
+bikelane predict                     # 1  tiles → lane-marking class masks
+bikelane centerlines all             # 2  masks → lane centerlines
+bikelane signs detect                # 3  tiles → bike pavement symbols
 bikelane signs filter --sweep        #    choose the acceptance threshold, then:
 bikelane signs filter
 bikelane join match                  # 4  symbols × centerlines → bike lanes with a type
