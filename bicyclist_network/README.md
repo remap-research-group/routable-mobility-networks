@@ -84,11 +84,14 @@ bikelane --help
 
 **3. Download the pretrained weights.** The two checkpoints (segmentation
 U-Net ~94 MB, YOLO detector ~45 MB) are too large for git and are attached to
-a GitHub Release. `download.py` (standard library only) fetches them, verifies
-the checksums and puts them where the code expects them:
+the GitHub Release
+[`bikenet-v0.1`](https://github.com/remap-research-group/routable-mobility-networks/releases/tag/bikenet-v0.1).
+`download.py` (standard library only) fetches them, verifies the checksums and
+puts them where the code expects them:
 
 ```bash
 python download.py               # → run/src/seg_unet_r34.pt, run/src/yolo26m_bikesign.pt
+python download.py --tiles BOSTON    # optionally + the example imagery (see Run Our Example)
 ```
 
 Manual alternative: download both `.pt` files from the release page into `run/src/`.
@@ -97,22 +100,24 @@ Manual alternative: download both `.pt` files from the release page into `run/sr
 
 ### Run Our Example
 
-`example/input/` holds a block of MassGIS 2025 tiles for each of the two
-reference towns, Lexington (suburban) and Boston (dense downtown), with our
-results in `example/output/provided/`. From `bicyclist_network/`:
+The two reference towns, Boston (dense downtown) and Lexington (suburban),
+are the examples: their `Tile_Mappings.csv` / `imagery_info.json` and our
+results are in `example/`, the tiles themselves come from the GitHub Release
+(they are several GB). From `bicyclist_network/`:
 
 ```bash
-bikelane config      -c example/lexington.yaml       # paths, CRS, weights — everything found?
-bikelane predict     -c example/lexington.yaml       # then the remaining stages, see example/README.md
-# … or all stages at once:
-cp example/lexington.yaml bikelane.yaml && bash run/run_all.sh
+python download.py --tiles BOSTON            # ~4 GB → example/input/BOSTON/tiles/  (LEXINGTON: ~14 GB)
+bikelane config  -c example/boston.yaml      # paths, CRS, weights — everything found?
+bikelane predict -c example/boston.yaml      # then the remaining stages, see example/README.md
+# … or all stages at once (~1 h on one GPU):
+cp example/boston.yaml bikelane.yaml && bash run/run_all.sh
 ```
 
-Your run goes to `example/output/bikelanes/LEXINGTON/`, next to
-`provided/LEXINGTON/`, so the two can be compared. See
-[example/README.md](example/README.md).
+Your run goes to `example/output/bikelanes/BOSTON/`, our results are in
+`example/output/provided/BOSTON/main/`, so the two can be compared file for
+file. See [example/README.md](example/README.md).
 
-<p align="center"><img src="misc/example_lexington.png" alt="Extracted bicycle facilities, Lexington, MA (shared lanes orange, bike-only lanes blue)" width="60%"></p>
+<p align="center"><img src="misc/example_boston.png" alt="Extracted bicycle facilities, Boston, MA (shared lanes orange, bike-only lanes blue)" width="70%"></p>
 
 <br>
 
@@ -217,7 +222,7 @@ bicyclist_network/
 ├── download.py              # fetch the released weights → run/src/
 ├── bikelane.example.yaml    # project-file template: the area, data_root, imagery_root, overrides
 ├── requirements.txt / pyproject.toml
-├── example/                 # sample tiles for Lexington and Boston + our results
+├── example/                 # the two reference towns: tile index + our results (tiles from the release)
 ├── misc/                    # figures
 ├── run/                     # everything needed to run the tool
 │   ├── bikelane_extract/    #   the package behind the `bikelane` command (stages 1–5, osm, config)

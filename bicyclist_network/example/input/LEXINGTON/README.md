@@ -1,9 +1,11 @@
-<!-- PLACEHOLDER — fill with example/make_input.py, then delete this file -->
-Example input for LEXINGTON: a block of 1024 px tiles cut from the full imagery run.
+<!-- PLACEHOLDER — delete once Tile_Mappings.csv and imagery_info.json are in place -->
+Example input for LEXINGTON.
 
-Expected contents (written by `python example/make_input.py --src <imagery_root>/LEXINGTON --tile <top-left tile> --n 6`):
+In the repository:
 
-    tiles/tile_px<X>_py<Y>.jpg     the block (6 × 6 = 36 tiles ≈ 10 MB; up to 12 × 12 is fine)
-    Tile_Mappings.csv              only the rows of those tiles
-    imagery_info.json              CRS / resolution / tile size, copied from the full run
-    example_input.json             what was cut and from where
+    Tile_Mappings.csv     image_name, CRS_X, CRS_Y, Pixel_X, Pixel_Y for every tile of the town
+    imagery_info.json     crs, resolution_m, tile_px, tile_overlap, stride_px, origin …
+
+Not in the repository (git-ignored) — fetched from the GitHub Release `bikenet-v0.1`:
+
+    tiles/tile_px<X>_py<Y>.jpg       python download.py --tiles LEXINGTON
